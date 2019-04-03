@@ -12,20 +12,6 @@
 //
 //*****************************************************************************
 
-/**************************** LIST OF THINGS TO DO *** ************************/
-/* 
- *  Modularize the asteriods game to reduce coupling and increase readability
- *  Fix the acceleration problem in Asteriods (Possibly fixed?)
- *  Make asteriods more effecient so it can handle higher framerates
- *      * Address repeated loops
- *      * Make control logic easier to follow (see modularization)
- *      * possibly convert the boolean array to a toogle vector
- *  Transition the splash screen to an FRC
- *  Address blinky concerns
- *  add comments for frame buffer code (done)
- *  Address code style issues in StringToFloat
- */
-/**************************** END LIST OF THINGS TO DO ************************/
 /******************************* begin includes ******************************/
 #include <stdint.h>
 #include <stdbool.h>
@@ -71,24 +57,25 @@
 #include "lbHeaders/Game/bullet.h"
 #include "lbHeaders/Game/spaceship.h"
 
-#include "lbHeaders/lb_buttons.h"
-#include "lbHeaders/graphics/luke_graphics.h"
-#include "lbHeaders/graphics/asteroids_graphics.h"
-
-#define ONE_KHZ_LOAD 80000
-#define SIXTYFOUR_FPS 1250000
-#define EIGHTY_MHZ
+#define ONE_KHZ_LOAD 16000
+#define SIXTYFOUR_FPS 500000
 #define M_PI 3.14159265359
 #define M_G 9.80665
-#define MAX_BUF_SZ 16
+<<<<<<< HEAD
+#define MAX_BUF_SZ 32
+#define DEBUG_MODE USER_TOGGLE_1
+#define DISPLAY_MODE_CYCLER USER_TOGGLE_2
+=======
+#define MAX_BUF_SZ 32;
 #define DEBUG_MODE USER_TOGGLE_1
 #define DISPLAY_MODE_CYCLER USER_TOGGLE_2
 #define ACCELDATA_NORM 1
-#define OFF_SCREEN_BUF_SZ GrOffScreen8BPPSize(96,64)
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
 
 typedef enum disp {
   level, game, numDisp, numModes } displayMode;
 
+<<<<<<< HEAD
 typedef struct buf {
   float fbuf[MAX_BUF_SZ];
   uint16_t currentIndex;
@@ -98,6 +85,9 @@ typedef struct buf {
 void addValueToBuffer(CircularBuffer* buf, float valueToAdd);
 float averageBuffer(CircularBuffer* buf);
 CircularBuffer newBuffer();
+=======
+
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
 void enableTimers(void);
 void Timer0InterruptHandler(void);
 
@@ -117,28 +107,16 @@ void debugWriteToOLED(float* accelData, float* gyroData);
 void bubbleLevel(float* accelData, Point* location);
 void runAsteroids(void);
 tContext g_sContext; /* global OLED sContext */
-tDisplay g_sOffScreen; /* offscreen buffer in SRAM to reduce flickering */
-uint8_t pui8_offscreenbuffer[OFF_SCREEN_BUF_SZ]; /*color palette array */
-uint32_t g_pui8Palette[7] = {
-  ClrBlack,
-  ClrWhite,
-  ClrRed,
-  ClrGold,
-  ClrBlue,
-  ClrGreen,
-  ClrSilver
-};
-/* an a toggle related to the screen overwrites in the offscreen buffer */
-bool shouldClearScreen; 
-#define NUM_PALETTE_ENTRIES sizeof(g_pui8Palette) / sizeof(uint32_t)
-
 tI2CMInstance MPUI2C; /* MPU I2C Global Instance */
 displayMode dispMode = level;
+<<<<<<< HEAD
+
+=======
 tMPU9150 MPU;
 float g_accelData[3];
-/*This should really be define constants or an enum instead of an array*/
 uint8_t asteroidFlags[4] = {0x01, 0x02, 0x04, 0x08}; /* left, right, shoot */
 uint8_t asteroidFlagsEnabled = 0x00;
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
 //*****************************************************************************
 //
 // The error routine that is called if the driver library encounters an error.
@@ -180,14 +158,9 @@ int main(void)
 {
   
   FPULazyStackingEnable();
-#ifdef EIGHTY_MHZ
-  /* set the clock to run at 80MHZ */
-  SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN |
-                 SYSCTL_XTAL_16MHZ);
-#else
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                  SYSCTL_XTAL_16MHZ);
-#endif
+  
   const char* userToggles[4];
   uint8_t sizes[4];
   const uint8_t prompts = 2;
@@ -195,10 +168,11 @@ int main(void)
   userToggles[1] = "Cycle between display modes";
   sizes[0] = 18;
   sizes[1] = 27;
-  tMPU9150 MPU;
-  float accelData[3];
   float gyroData[3];
-  shouldClearScreen = true;
+<<<<<<< HEAD
+  
+=======
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
   Point bubble;
   bubble.x = 0;
   bubble.y = 0;
@@ -211,19 +185,16 @@ int main(void)
   initBlinky();
   configureUART();
   initDisplay(&g_sContext);
-  displaySplashAnimated(&g_sContext);
-  //clearDisplay(&g_sContext, false);
+  printSplashText(&g_sContext);
+  clearDisplay(&g_sContext, false);
   UARTQueue = newQueue();
   enableTimers();
-  configureButtons();
-  initI2C();
-  /*End Periph Enables*/
+<<<<<<< HEAD
   
-  /* Configure the off screen buffer */ 
-    GrOffScreen8BPPInit(&g_sOffScreen, pui8_offscreenbuffer, 96, 64);
-  GrOffScreen8BPPPaletteSet(&g_sOffScreen, g_pui8Palette, 0 
-                            ,NUM_PALETTE_ENTRIES);
-  /* end off screen buffer config */
+=======
+  configureButtons();
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
+  /*End Periph Enables*/
   
   /*Begin Interrupt Config*/
   UARTIntRegister(UART0_BASE, UARTIntHandler);
@@ -233,14 +204,13 @@ int main(void)
   /*End Interrupt Config*/
   
   /* Enable MPU */
+  initI2C();
   configureMPU(&MPUI2C, &MPU, 0x69);
   /* End Enable MPU */
-  
+  /* Display Clock Frequency */
+  //displayClockFrequency(&g_sContext);
+  /* End Display Clock Frequency */
   while(!(booleanToggles & QUIT)) {
-    GrContextInit(&g_sContext, &g_sOffScreen);
-    if (shouldClearScreen) {
-        clearDisplay(&g_sContext, false);
-    }
     getMPUDataAccel(&MPU, g_accelData);
     if(peek(&UARTQueue) != -1) {
       processMenuChar(&booleanToggles, dequeue(&UARTQueue));
@@ -252,7 +222,7 @@ int main(void)
       booleanToggles ^= DISPLAY_SPLASH;
       IntMasterDisable();
       displaySplashAnimated(&g_sContext);
-      //clearDisplay(&g_sContext, false);
+      clearDisplay(&g_sContext, false);
       IntMasterEnable();
     }
     if (booleanToggles & PRINT_MENU) {
@@ -269,17 +239,12 @@ int main(void)
     }
     if (booleanToggles & DISPLAY_MODE_CYCLER) {
       booleanToggles ^= DISPLAY_MODE_CYCLER;
-      shouldClearScreen = true;
       dispMode = (dispMode + 1) % numModes;
-    }
-    if (asteroidFlagsEnabled & asteroidFlags[3]) {
-      asteroidFlagsEnabled ^= asteroidFlags[3];
-      TimerEnable(TIMER0_BASE, TIMER_A);
     }
     switch (dispMode) {
     case level:
       bubbleLevel(g_accelData, &bubble);
-      //clearScreen(&g_sContext);
+      clearScreen(&g_sContext);
       drawCircle(&g_sContext, &bubble, 3);
       break; /* TODO */
     case game:
@@ -288,9 +253,6 @@ int main(void)
       debugWriteToOLED(g_accelData, gyroData);
       break;
     }
-     GrContextInit(&g_sContext, &g_sCFAL96x64x16); 
-     GrImageDraw(&g_sContext, g_sOffScreen.pvDisplayData, 0, 0);
-     
   }
 }
 
@@ -298,15 +260,21 @@ void Timer0InterruptHandler(void) {
   TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
   if (dispMode == game)
     runAsteroids();
-  else {
-    shouldClearScreen = true;
-  }
 }
 
-
-void initAsterioids(Spaceship& mySpaceship, Asteroid Asteroids[]
-                    Asteroid asteroidsSM[],  Bullet bullets[]) {
-    *mySpaceship = newSpaceship();
+void runAsteroids(void) {
+  /* create spaceship sprite */
+  static Spaceship mySpaceship;
+  /* create asteroids sprite */
+  static Asteroid asteroids[MD_ASTEROIDS];
+  /* create sm asteroids sprite */
+  static Asteroid asteroidsSM[MD_ASTEROIDS * 2];
+  /* create bullets sprites */
+  static Bullet bullets[MAX_BULLETS];
+  static uint8_t onload = 1;
+  static uint8_t bulletCounter = 0;
+  if (onload) {
+    mySpaceship = newSpaceship();
     for (int i = 0; i < MD_ASTEROIDS; i++) {
       asteroids[i] = newAsteroid();
       asteroids[i].sprite.center = newPoint(60 * V_MOD, 56 * V_MOD);
@@ -323,42 +291,26 @@ void initAsterioids(Spaceship& mySpaceship, Asteroid Asteroids[]
       bullets[i] = newBullet(&mySpaceship);
       bullets[i].sprite.isAlive = 0;
     }
-}
-
-void runAsteroids(void) {
-  /* create spaceship sprite */
-  static Spaceship mySpaceship;
-  /* create asteroids sprite */
-  static Asteroid asteroids[MD_ASTEROIDS];
-  /* create sm asteroids sprite */
-  static Asteroid asteroidsSM[MD_ASTEROIDS * 2];
-  /* create bullets sprites */
-  static Bullet bullets[MAX_BULLETS];
-  static uint8_t onload = 1;
-  static uint8_t bulletCounter = 0;
-  Point accelVector;
-  if (onload) {
-    initAsteriods(&mySpaceShip, asteroids, asteroidsSM, bullets);
     onload ^= onload;
   } else {
-    //clearScreen(&g_sContext);
+    clearScreen(&g_sContext);
     
     /* accelerate the spaceship */
     /* accelerometer data is updated in main while(1) */
     /* generate and output vector */
-     accelVector = newPoint((int16_t)(g_accelData[0])
-                                 , (int16_t)(g_accelData[1]));
+    Point accelVector = newPoint((uint16_t)((g_accelData[1] / M_G) * 2.0)
+                                 , (uint16_t)((g_accelData[0] / M_G) * 2.0));
     accelerate(&mySpaceship.sprite, &accelVector);
     move(&mySpaceship.sprite);
     
     /* rotate the spaceship */
     if (asteroidFlagsEnabled & asteroidFlags[0]) {
       asteroidFlagsEnabled ^= asteroidFlags[0];
-      mySpaceship.angle = (mySpaceship.angle + 324) % 360;
+      mySpaceship.angle = (mySpaceship.angle + 349) % 360;
     }
     if (asteroidFlagsEnabled & asteroidFlags[1]) {
       asteroidFlagsEnabled ^= asteroidFlags[1];
-      mySpaceship.angle = (mySpaceship.angle + 36) % 360;
+      mySpaceship.angle = (mySpaceship.angle + 11) % 360;
     }
     
     
@@ -366,7 +318,7 @@ void runAsteroids(void) {
     for (int i = 0; i < MAX_BULLETS; i++) {
       bullets[i].timeAlive++;
       move(&bullets[i].sprite);
-      if (bullets[i].timeAlive > MAX_BULLET_LIFE * V_MOD)
+      if (bullets[i].timeAlive > MAX_BULLET_LIFE)
         bullets[i].sprite.isAlive = 0;
     }
     
@@ -381,19 +333,26 @@ void runAsteroids(void) {
     /* test asteroid collisions */
     for (int i = 0; i < MD_ASTEROIDS; i++) {
       move(&asteroids[i].sprite);
-      if (isCollided(&asteroids[i].sprite, &mySpaceship.sprite)
-          && asteroids[i].sprite.isAlive) {
+      if (isCollided(&asteroids[i].sprite, &mySpaceship.sprite) && asteroids[i].sprite.isAlive) {
         mySpaceship.sprite.isAlive = 0; /* kill it */
       }
       /* test bullet collisions */
       for (int j = 0; j < MAX_BULLETS; j++) {
-        if (isCollided(&asteroids[i].sprite, &bullets[j].sprite)
-            && bullets[j].sprite.isAlive  && asteroids[i].sprite.isAlive) {
+        if (isCollided(&asteroids[i].sprite, &bullets[j].sprite) && bullets[j].sprite.isAlive
+            && asteroids[i].sprite.isAlive) {
           asteroids[i].sprite.isAlive = 0;
           bullets[j].sprite.isAlive = 0;
           /* spawn new asteroids */
-          asteroidsSM[i * 2] = newSMAsteroid(&asteroids[i].sprite.center);
-          asteroidsSM[i * 2 + 1] = newSMAsteroid(&asteroids[i].sprite.center);
+          asteroidsSM[i * 2] = newAsteroid();
+          asteroidsSM[i * 2 + 1] = newAsteroid();
+          asteroidsSM[i * 2].size = 0;
+          asteroidsSM[i * 2 + 1].size = 0;
+          asteroidsSM[i * 2].sprite.center = asteroids[i].sprite.center;
+          asteroidsSM[i * 2 + 1].sprite.center = asteroids[i].sprite.center;
+          asteroidsSM[i * 2].sprite.velocity = newPoint(-5, 5);
+          asteroidsSM[i * 2 + 1].sprite.velocity = newPoint(5, -5);
+          asteroidsSM[i * 2].sprite.radius = SM_RADIUS;
+          asteroidsSM[i * 2 + 1].sprite.radius = SM_RADIUS;
           asteroidsSM[i * 2].sprite.isAlive = 1;
           asteroidsSM[i * 2 + 1].sprite.isAlive = 1;
         }
@@ -420,7 +379,7 @@ void runAsteroids(void) {
     for (int i = 0; i < MAX_BULLETS; i++) {
       displaySprite(&g_sContext, &(bullets[i].sprite), 0, 0x0);
     }
-    displaySpaceship(&g_sContext, &(mySpaceship));
+    displaySprite(&g_sContext, &(mySpaceship.sprite), 0, 0x0);
     
     /* check win/loss conditions and act accordingly */
     if (!mySpaceship.sprite.isAlive) {
@@ -432,11 +391,7 @@ void runAsteroids(void) {
     }
     displayLives(&g_sContext, mySpaceship.lives);
     if (mySpaceship.lives == 0) {
-      ShouldClearScreen = false;
-      displayTextToOLED(&g_sContext, OLED_TEXT_LINE1, "Game over.");
-      displayTextToOLED(&g_sContext, OLED_TEXT_LINE2, "Up to Reset");
-      TimerDisable(TIMER0_BASE, TIMER_A);
-      onload = 1;
+      /* TODO: tell the user that they lost */
     }
     uint8_t won = 1;
     for (int i = 0; i < MD_ASTEROIDS; i++) {
@@ -445,12 +400,7 @@ void runAsteroids(void) {
       }
     }
     if (won) {
-      /* inform the user */
-      shouldClearScreen = false;
-      displayTextToOLED(&g_sContext, OLED_TEXT_LINE1, "You won!!!");
-      displayTextToOLED(&g_sContext, OLED_TEXT_LINE2, "Up to Reset");
-      TimerDisable(TIMER0_BASE, TIMER_A);
-      onload = 1; /* flag reset game */
+      /* TODO: inform the user */
     }
   }
   /* initialize lives */
@@ -600,6 +550,23 @@ void getMPUDataAccel(tMPU9150 *thisMPU, float* accelArray) {
   MPU9150DataAccelGetFloat(thisMPU, &dataArray[0], &dataArray[1]
                            , &dataArray[2]);
   
+<<<<<<< HEAD
+=======
+  /* take the mean of readings */
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < ACCELDATA_NORM; j++) {
+      mean[i] += readings[j][i];
+    }
+    mean[i] /= (float)ACCELDATA_NORM;
+    
+    /* load the mean values into accelArray */
+    accelArray[i] = mean[i];
+  }
+  
+  ctr = (ctr + 1) % ACCELDATA_NORM;
+  /* MPU9150DataAccelGetFloat(thisMPU, &accelArray[0], &accelArray[1]
+  , &accelArray[2]); */
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
 }
 
 /*
@@ -628,8 +595,8 @@ void bubbleLevel(float* accelData, Point* location) {
   float temp = 0.0;
   float width = GrContextDpyWidthGet(&g_sContext) / 2.0;
   float height = GrContextDpyHeightGet(&g_sContext) / 2.0;
+<<<<<<< HEAD
   tRectangle rect;
-  prepareOLED(&g_sContext, ClrWhite, ClrBlack);
   rect.i16YMin = (GrContextDpyHeightGet(&g_sContext) /2) + 5;
   rect.i16YMax = (GrContextDpyHeightGet(&g_sContext) /2) - 5;
   rect.i16XMin = (GrContextDpyWidthGet(&g_sContext) /2);
@@ -640,6 +607,8 @@ void bubbleLevel(float* accelData, Point* location) {
   rect.i16XMin = (GrContextDpyWidthGet(&g_sContext) /2) - 5;
   rect.i16XMax = (GrContextDpyWidthGet(&g_sContext) /2) + 5;
   GrRectFill(&g_sContext, &rect);
+=======
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
   /* code for y-location */
   temp = accelData[0] / M_G;
   location->y = (uint8_t)((-1.0 * temp) * height + height);
@@ -665,6 +634,7 @@ void debugWriteToOLED(float* accelData, float* gyroData) {
   displayTextToOLED(&g_sContext, OLED_TEXT_LINE3, tmpString);
 }
 
+<<<<<<< HEAD
 
 void addValueToBuffer(CircularBuffer* buf, float valueToAdd) {
   buf->fbuf[buf->currentIndex] = valueToAdd;
@@ -680,14 +650,7 @@ float averageBuffer(CircularBuffer* buf) {
     average += buf->fbuf[i];
   }
   return average/buf->valuesInBuffer;
-}
-CircularBuffer newBuffer() {
-  CircularBuffer newBuff;
-  newBuff.currentIndex = 0;
-  newBuff.valuesInBuffer = 0;
-  return newBuff;
-}
-
+=======
 /*
 * Function: buttonsISR
 * Purpose: Interrupt Service Routine for the GPIO Buttons
@@ -707,9 +670,11 @@ void buttonsISR() {
     /* rotate right */
     asteroidFlagsEnabled ^= asteroidFlags[1]; /* toggle right */
   }
-  if (detectButtonPresses() == UP_BUTTON) {
-    /* flag reset game */
-    asteroidFlagsEnabled ^= asteroidFlags[3];
-    shouldClearScreen = true;
-  }
+>>>>>>> c104ffb3680622d261cd59c2b11f014f8683d2b8
+}
+CircularBuffer newBuffer() {
+  CircularBuffer newBuff;
+  newBuff.currentIndex = 0;
+  newBuff.valuesInBuffer = 0;
+  return newBuff;
 }

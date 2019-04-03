@@ -6,233 +6,252 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.c</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\spaceship.c</file>
-      <file>$PROJ_DIR$\..\mrbUtil\queue.c</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.c</file>
-      <file>$PROJ_DIR$\..\..\..\..\grlib\ewarm\Exe\grlib.a</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\asteroids.c</file>
-      <file>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.c</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\bullet.c</file>
-      <file>$PROJ_DIR$\..\mrbUtil\cec322Util.c</file>
-      <file>$PROJ_DIR$\..\mrbUtil\i2cwrite.c</file>
-      <file>$PROJ_DIR$\..\lbHeaders\lb_buttons.c</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\ewarm\Exe\driverlib.a</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\ewarm\Exe\sensorlib.a</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\asteroids_graphics.c</file>
-      <file>$PROJ_DIR$\Lab_8_Main.c</file>
-      <file>$PROJ_DIR$\..\drivers\cfal96x64x16.c</file>
-      <file>$PROJ_DIR$\..\drivers\buttons.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.o</file>
-      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\grlib\grlib.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\asteroids_graphics.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\ostream</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocale_lconv.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\CEC322_Lab8.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\xmtx.h</file>
+      <file>$PROJ_DIR$\ewarm\Exe\CEC322_Lab8.bin</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\hw_ak8975.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\mrbUtil\graphics\shapes.hpp</file>
+      <file>$PROJ_DIR$\..\mrbUtil\graphics\display.hpp</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.__cstat.et</file>
+      <file>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\istream</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\iostream</file>
+      <file>$PROJ_DIR$\..\mrbUtil\queue.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\rom.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.o</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\streambuf</file>
+      <file>$PROJ_DIR$\ewarm\Obj\pm_images.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\ak8975.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\utils\uartstdio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\i2cm_drv.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\inc\hw_nvic.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\hw_mpu9150.h</file>
+      <file>$PROJ_DIR$\Lab_8_Main.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cstddef</file>
+      <file>$PROJ_DIR$\ewarm\Obj\asteroids.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\gpio.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\interrupt.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtls.h</file>
+      <file>$PROJ_DIR$\..\mrbUtil\cec322Util.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\fpu.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\inc\hw_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\xstddef</file>
+      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\inc\hw_memmap.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\adc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\xdebug</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\queue.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\inc\hw_ints.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$PROJ_DIR$\ewarm\Exe\uart_echo.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\cctype</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\sprite.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocalelist.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\lb_buttons.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\comp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\timer.h</file>
+      <file>$PROJ_DIR$\ewarm\List\uart_echo.map</file>
+      <file>$PROJ_DIR$\ewarm\Obj\bullet.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\climits</file>
+      <file>$PROJ_DIR$\ewarm\Obj\spaceship.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\mpu9150.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\pin_map.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\lb_buttons.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\sprite.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\bullet.o</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\bullet.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\asteroids.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\asteroids.o</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\sprite.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\asteroids_graphics.o</file>
+      <file>$PROJ_DIR$\..\mrbUtil\i2cwrite.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\ewarm\Obj\lb_buttons.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\bullet.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\iosfwd</file>
+      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\queue.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\ios</file>
+      <file>$TOOLKIT_DIR$\inc\c\cstring</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\sysctl.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\spaceship.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\wchar.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\xiosbase</file>
+      <file>$PROJ_DIR$\ewarm\Obj\asteroids_graphics.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\uart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\ssi.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\xstring</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$PROJ_DIR$\ewarm\Obj\pm_images.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xlocale.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\errno.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\clocale</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.pbi</file>
+      <file>$PROJ_DIR$\ewarm\Obj\queue.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\xlocnum</file>
+      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.pbi</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\sprite.c</file>
       <file>$TOOLKIT_DIR$\inc\c\cerrno</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.o</file>
-      <file>$PROJ_DIR$\ewarm\Obj\sprite.__cstat.et</file>
+      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.o</file>
+      <file>$PROJ_DIR$\..\mrbUtil\queue.c</file>
       <file>$TOOLKIT_DIR$\inc\c\cstdlib</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\stdexcept</file>
-      <file>$PROJ_DIR$\ewarm\Obj\spaceship.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
       <file>$PROJ_DIR$\..\drivers\cfal96x64x16.h</file>
       <file>$PROJ_DIR$\ewarm\Obj\spaceship.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\locale.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.o</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.h</file>
-      <file>$PROJ_DIR$\CEC322_Lab8.icf</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.h</file>
       <file>$PROJ_DIR$\ewarm\Obj\lb_buttons.__cstat.et</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\asteroids.h</file>
       <file>$PROJ_DIR$\ewarm\Obj\asteroids_graphics.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$PROJ_DIR$\CEC322_Lab8.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.o</file>
+      <file>$PROJ_DIR$\ewarm\Obj\spaceship.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\spaceship.c</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\grlib\grlib.h</file>
+      <file>$PROJ_DIR$\ewarm\Obj\sprite.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\stdexcept</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\locale.h</file>
+      <file>$PROJ_DIR$\startup_ewarm.c</file>
+      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.o</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.h</file>
+      <file>$PROJ_DIR$\..\drivers\buttons.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\asteroids_graphics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\ecpp\ostream</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\asteroids.h</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\asteroids.c</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Game\bullet.c</file>
+      <file>$PROJ_DIR$\..\drivers\cfal96x64x16.c</file>
+      <file>$PROJ_DIR$\..\mrbUtil\cec322Util.c</file>
+      <file>$PROJ_DIR$\..\mrbUtil\i2cwrite.c</file>
+      <file>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\sensorlib\ewarm\Exe\sensorlib.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\driverlib\ewarm\Exe\driverlib.a</file>
+      <file>$PROJ_DIR$\Lab_8_Main.c</file>
+      <file>$PROJ_DIR$\..\lbHeaders\lb_buttons.c</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.c</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\grlib\ewarm\Exe\grlib.a</file>
+      <file>$PROJ_DIR$\..\lbHeaders\Graphics\asteroids_graphics.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\cstdio</file>
       <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
       <file>$PROJ_DIR$\..\..\..\..\driverlib\debug.h</file>
       <file>$TOOLKIT_DIR$\inc\ecpp\exception</file>
       <file>$PROJ_DIR$\ewarm\Obj\pm_images.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\cstdio</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\pm_images.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\queue.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.__cstat.et</file>
-      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.__cstat.et</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\xlocale.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\xlocnum</file>
-      <file>$PROJ_DIR$\ewarm\Obj\queue.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\uart.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\ssi.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\cstring</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\xstring</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\sysctl.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\wchar.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\ios</file>
-      <file>$TOOLKIT_DIR$\inc\c\errno.h</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\spaceship.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\xiosbase</file>
-      <file>$PROJ_DIR$\ewarm\Obj\asteroids_graphics.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\clocale</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\istream</file>
-      <file>$PROJ_DIR$\..\mrbUtil\graphics\display.hpp</file>
-      <file>$PROJ_DIR$\..\mrbUtil\graphics\shapes.hpp</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\ak8975.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\hw_mpu9150.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Util.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
-      <file>$PROJ_DIR$\..\mrbUtil\queue.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\Lab_8_Main.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\..\utils\uartstdio.h</file>
-      <file>$PROJ_DIR$\ewarm\Exe\CEC322_Lab8.bin</file>
-      <file>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\streambuf</file>
-      <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.o</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\iostream</file>
-      <file>$PROJ_DIR$\ewarm\Obj\pm_images.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\rom.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.__cstat.et</file>
-      <file>$PROJ_DIR$\ewarm\Obj\startup_ewarm.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\i2cm_drv.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\inc\hw_nvic.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xlocale_lconv.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\CEC322_Lab8.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\c\xmtx.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\hw_ak8975.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\..\mrbUtil\cec322Util.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cstddef</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\sprite.c</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\xstddef</file>
-      <file>$PROJ_DIR$\..\..\..\..\inc\hw_memmap.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\gpio.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\i2c.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\queue.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\fpu.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\xdebug</file>
-      <file>$PROJ_DIR$\ewarm\Obj\asteroids.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtls.h</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\inc\hw_ints.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cfal96x64x16.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\adc.h</file>
-      <file>$PROJ_DIR$\ewarm\Exe\uart_echo.out</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\interrupt.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\inc\hw_types.h</file>
-      <file>$PROJ_DIR$\Lab_8_Main.cpp</file>
-      <file>$TOOLKIT_DIR$\inc\c\cctype</file>
-      <file>$PROJ_DIR$\ewarm\Obj\luke_graphics.pbi</file>
-      <file>$PROJ_DIR$\startup_ewarm.c</file>
-      <file>$PROJ_DIR$\ewarm\Obj\cec322Peripherals.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\bullet.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\sprite.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\lb_buttons.o</file>
-      <file>$PROJ_DIR$\..\..\..\..\sensorlib\mpu9150.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\pin_map.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\lb_buttons.pbi</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\sprite.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\climits</file>
-      <file>$PROJ_DIR$\ewarm\Obj\spaceship.__cstat.et</file>
-      <file>$PROJ_DIR$\ewarm\Obj\sprite.o</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-      <file>$PROJ_DIR$\ewarm\List\uart_echo.map</file>
-      <file>$PROJ_DIR$\..\lbHeaders\Game\bullet.h</file>
-      <file>$TOOLKIT_DIR$\inc\ecpp\iosfwd</file>
-      <file>$PROJ_DIR$\ewarm\Obj\bullet.o</file>
-      <file>$PROJ_DIR$\..\mrbUtil\i2cwrite.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\bullet.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\xlocalelist.h</file>
-      <file>$PROJ_DIR$\..\lbHeaders\lb_buttons.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\asteroids.pbi</file>
-      <file>$PROJ_DIR$\ewarm\Obj\asteroids_graphics.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\asteroids.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\comp.h</file>
-      <file>$PROJ_DIR$\ewarm\Obj\i2cwrite.__cstat.et</file>
-      <file>$PROJ_DIR$\..\..\..\..\driverlib\timer.h</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 130 150</file>
+          <file> 61 70</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.c</name>
+      <name>$PROJ_DIR$\Lab_8_Main.cpp</name>
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 50</file>
+          <file> 128</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 47</file>
+          <file> 27</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 92</file>
+          <file> 99</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 119 127 51 104 30 162 108 39 21 34 94 19 49</file>
+          <file> 127 39 108 6 125 67 34 124 23 25 162 52 13 12 145 92 113 116 107 72 11 109 137 1 161 81 144 54 119 60 19 97 62 22 106 41 3 96 65 135 164 46 35 50 103 89 93 130 33 53 56 48 163 43 37 75 40 94 101 15 51 49 133 112 28 120 142 31 5 29 21 74 42 44 69 10 14 85 7 8 140</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 104 51 39 127 94 108 34 19 21 119 30 162 49</file>
+          <file> 145 39 49 133 6 34 92 37 74 108 46 130 69 56 101 31 85 109 54 106 137 60 103 144 45 127 25 163 40 51 120 29 10 8 124 52 12 116 119 1 135 35 50 93 33 23 48 13 43 75 94 15 28 142 5 21 42 14 7 140 125 67 162 113 72 161 19 107 11 81 97 62 53 22 41 96 65 3 164 89 112 44</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\lbHeaders\Game\spaceship.c</name>
+      <name>$PROJ_DIR$\ewarm\Exe\uart_echo.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>ILINK</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 126 82 84 78 139 132 18 154 159 59 128 87 57 105 55 153 121 77 117 0 86 104 38</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\lbHeaders\Game\sprite.c</name>
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 32</file>
+          <file> 77</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 29</file>
+          <file> 64</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 147</file>
+          <file> 134</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 69 145 34 127 51 104 30 162 108 39 94 119 21 38 107 78 44 125 19 49 65 36 22</file>
+          <file> 83 127 39 108 6 136 67 34 124 23 60 144 130 33 25 162 52 133 112 94 140 143 95</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 94 78 127 108 30 21 44 38 65 104 162 51 107 36 145 34 119 19 22 39 125 69 49</file>
+          <file> 39 108 23 52 25 140 130 94 124 144 83 143 127 60 133 6 34 136 67 33 162 95 112</file>
         </tool>
       </inputs>
     </file>
@@ -241,48 +260,79 @@
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 118</file>
+          <file> 55</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 52</file>
+          <file> 111</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 58</file>
+          <file> 91</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 119 127 51 104 30 162 108 39 21 83 34 94 126 111 132</file>
+          <file> 60 39 108 6 136 67 34 124 144 14 127 23 56 48 44</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 127 108 30 51 132 21 34 83 104 162 126 119 39 94 111</file>
+          <file> 39 34 136 108 44 144 127 14 6 67 56 60 124 23 48</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.c</name>
+      <name>$PROJ_DIR$\..\lbHeaders\Game\spaceship.c</name>
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 116</file>
+          <file> 121</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 135</file>
+          <file> 129</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 96</file>
+          <file> 73</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 94 19 49 65 36 40 119 21 38 107</file>
+          <file> 95 83 127 39 108 6 136 67 34 124 23 60 144 130 33 25 162 52 133 112 94 140 143</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 52 83 108 39 23 94 130 124 144 60 143 127 133 140 6 34 136 67 33 162 112 95</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\startup_ewarm.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 117</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 100</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127 39 108 6 136 67 34 124 30 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 124 44 108 39 30 6 34 136 67 127</file>
         </tool>
       </inputs>
     </file>
@@ -291,11 +341,200 @@
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 161</file>
+          <file> 82</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 158</file>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 146 83 127 39 108 6 136 67 34 124 23 60 144 130 33 25 162 52 133 112 94 140</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94 83 130 39 34 136 52 23 25 6 67 108 127 60 133 140 124 144 33 162 146 112</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\lbHeaders\Game\bullet.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79 83 127 39 108 6 136 67 34 124 23 60 144 130 33 25 162 52 133 112 94 140 95</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 25 67 23 6 108 95 130 94 34 136 52 83 127 60 133 140 124 144 33 162 112 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\drivers\cfal96x64x16.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 110</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 23 127 39 108 6 136 67 34 124 48 37 102 94 15 75 133 112 120</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 133 34 136 102 48 15 6 67 127 37 94 75 120 108 124 23 112</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mrbUtil\cec322Util.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 132</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127 39 108 6 136 67 34 124 23 56 48 163 43 37 40 94 101 15 51 133 112 28 120 142 42 44 69 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 42 94 56 163 133 124 108 69 37 15 120 23 48 43 40 101 51 28 142 10 6 34 136 67 127 44 112 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mrbUtil\i2cwrite.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 127 39 108 6 136 67 34 124 23 11 56 48 163 43 94 49</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43 11 39 6 108 127 48 49 34 124 23 56 163 94 136 67 85</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 139</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127 39 108 6 136 67 34 124 23 56 48 163 43 37 40 94 101 15 51 68 133 112 28 120 142 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 142 94 163 68 124 108 56 37 15 28 39 23 48 43 40 101 51 133 120 10 6 34 136 67 45 127 112</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Lab_8_Main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127 39 108 6 136 67 34 124 23 25 162 52 56 48 163 43 37 75 40 94 101 15 51 49 133 112 28 120 142 31 5 29 21 74 42 44 69 10 14 85 11 66 140 143 60 144 130 33 83 95 146 79</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 146 163 28 108 75 42 15 140 48 5 66 56 127 25 43 94 49 142 21 14 143 95 124 52 23 130 34 33 60 37 40 101 51 133 120 31 29 74 10 85 83 79 6 136 67 162 44 144 112 45 69 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\lbHeaders\lb_buttons.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -305,146 +544,65 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 42 145 34 127 51 104 30 162 108 39 94 119 21 38 107 78 44 125 19 49 65 36</file>
+          <file> 127 39 108 6 136 67 34 124 23 60 144 130 33 81 54 56 48 163 43 37 40 94 101 15 133 112 120 142 75 28 66 140</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 65 145 38 127 108 30 125 94 78 104 162 51 34 119 19 36 39 21 107 44 42 49</file>
+          <file> 142 108 43 54 81 101 140 39 33 60 48 40 133 28 124 34 23 130 56 163 37 94 15 120 75 66 6 136 67 144 127 112 45</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\mrbUtil\cec322Peripherals.c</name>
+      <name>$PROJ_DIR$\..\lbHeaders\Graphics\luke_graphics.c</name>
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 25</file>
+          <file> 57</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 137</file>
+          <file> 47</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 74</file>
+          <file> 24</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 94 126 111 45 120 113 131 65 60 93 129 163 19 49 85 31 16 87</file>
+          <file> 127 39 108 6 136 67 34 124 23 133 112 94 140 141 60 144 130 33</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 65 45 163 39 51 126 113 93 85 127 94 111 120 131 60 129 19 31 87 104 108 30 162 115 34 49</file>
+          <file> 124 108 60 140 39 133 33 23 94 141 130 6 34 136 67 112 127 144</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\lbHeaders\Game\bullet.c</name>
+      <name>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.c</name>
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 153</file>
+          <file> 105</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 139</file>
+          <file> 165</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 155</file>
+          <file> 20</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 151 145 34 127 51 104 30 162 108 39 94 119 21 38 107 78 44 125 19 49 65 36 69</file>
+          <file> 60 39 108 6 136 67 34 124 144 127 23 133 112</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 127 78 162 94 104 51 69 38 65 108 30 125 145 34 119 19 36 39 21 107 44 49 151</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mrbUtil\cec322Util.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 17</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 81</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 94 126 111 45 120 113 131 65 60 93 129 19 49 85 31 16 105 132 165 87</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 127 105 65 126 45 19 39 51 165 113 93 31 94 111 120 131 60 129 85 16 87 104 108 30 162 34 132 49 115</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mrbUtil\i2cwrite.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 114</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 164</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 154 34 127 51 104 30 162 108 39 94 89 126 111 45 120 65 117</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 120 89 127 104 51 34 111 117 108 39 94 126 45 65 30 162 154</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\lbHeaders\lb_buttons.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 141</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 144</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 94 119 21 38 107 160 112 126 111 45 120 113 131 65 60 93 19 49 31 16 143 85 157 36</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 16 51 120 112 160 60 36 127 107 119 111 131 19 85 39 108 94 38 126 45 113 65 93 31 143 157 104 30 162 21 34 49 115</file>
+          <file> 6 108 124 39 23 34 127 133 144 60 136 67 112</file>
         </tool>
       </inputs>
     </file>
@@ -453,179 +611,25 @@
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 159</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 43</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 71</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 22 34 127 51 104 30 162 108 39 94 119 21 38 107 19 49 65 36 145 78 44 125 69</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38 78 36 39 51 21 125 94 19 69 127 49 34 119 65 145 104 108 30 162 107 22 44</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Lab_8_Main.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 18</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
           <file> 84</file>
         </tool>
         <tool>
-          <name>__cstat</name>
-          <file> 54</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 94 78 44 125 126 111 45 120 113 143 131 65 60 93 129 117 19 49 85 31 16 80 103 98 79 142 105 132 165 87 83 154 89 157 36 22 119 21 38 107 145 69 42 151</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 42 45 85 143 105 162 93 127 36 111 103 157 104 44 126 34 78 120 65 117 16 79 83 22 69 108 30 94 38 107 119 113 131 60 129 19 31 80 98 142 87 154 145 151 51 39 125 132 21 49 115 165 89</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\drivers\cfal96x64x16.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 90</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55</file>
+          <file> 123</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 128</file>
+          <file> 98</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 94 34 127 51 104 30 162 108 39 111 113 61 65 93 143 19 49 31</file>
+          <file> 143 127 39 108 6 136 67 34 124 23 60 144 130 33 133 112 94 140 83 25 162 52 95</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 127 19 108 30 61 111 93 104 162 34 113 65 143 31 51 39 94 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\lbHeaders\Game\sprite.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 148</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 140</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 26</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 145 34 127 51 104 30 162 108 39 94 119 21 38 107 78 44 125 19 49 65 36 22 69</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 51 127 119 125 145 19 22 34 36 39 21 94 38 78 65 104 108 30 162 107 44 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\ewarm\Exe\uart_echo.out</name>
-      <outputs>
-        <tool>
-          <name>OBJCOPY</name>
-          <file> 86</file>
-        </tool>
-        <tool>
-          <name>ILINK</name>
-          <file> 150</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 37 161 159 153 25 17 90 11 4 114 18 141 116 50 118 12 32 148 35 95 149 59 124</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Lab_8_Main.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 18</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 54</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34 127 51 104 20 162 108 39 94 78 44 125 91 75 23 67 57 24 68 146 89 72 33 100 48 160 21 112 27 119 88 70 134 82 56 123 102 66 156 28 46 110 106 138 64 152 63 38 107 121 126 111 45 120 113 143 131 65 60 93 129 117 19 49 85 31 16 80 103 98 79 142 105 132 165 87 83 154 77 76 36</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23 127 117 19 104 108 67 113 142 51 110 38 165 126 60 80 154 72 112 56 33 119 64 21 115 34 78 45 131 129 31 98 87 76 39 125 75 24 27 100 28 106 138 63 107 94 111 91 120 143 65 93 85 16 103 79 105 83 77 36 20 162 44 57 146 48 88 68 89 160 70 134 121 82 123 66 156 102 46 152 49 132</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\startup_ewarm.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 53</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 34 127 51 104 30 162 108 39 99 132</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 39 132 51 127 99 104 108 30 162 34</file>
+          <file> 130 25 140 124 108 144 52 23 133 95 39 112 127 60 94 83 6 34 136 67 33 143 162</file>
         </tool>
       </inputs>
     </file>

@@ -12,57 +12,49 @@
 //
 //*****************************************************************************
 
-/**************************** LIST OF THINGS TO DO *** ************************/
-/* 
- *  Modularize the asteriods game to reduce coupling and increase readability
- *  Fix the acceleration problem in Asteriods (Possibly fixed?)
- *  Make asteriods more effecient so it can handle higher framerates
- *      * Address repeated loops
- *      * Make control logic easier to follow (see modularization)
- *      * possibly convert the boolean array to a toogle vector
- *  Transition the splash screen to an FRC
- *  Address blinky concerns
- *  add comments for frame buffer code (done)
- *  Address code style issues in StringToFloat
- */
-/**************************** END LIST OF THINGS TO DO ************************/
+
 /******************************* begin includes ******************************/
-#include <stdint.h>
-#include <stdbool.h>
-#include <math.h>
+#include <stdint.h> 
+#include <stdbool.h> //booleans
+#include <math.h> //some sine and drawing ops
 
-#include "inc/hw_ints.h"
-#include "inc/hw_memmap.h"
+#include "inc/hw_ints.h" //location of who interrupts on what pin
+#include "inc/hw_memmap.h" //location of who communicates at what address
 
-#include "driverlib/debug.h"
-#include "driverlib/fpu.h"
-#include "driverlib/gpio.h"
-#include "driverlib/pin_map.h"
-#include "driverlib/interrupt.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/uart.h"
+#include "driverlib/debug.h" //error routine
+#include "driverlib/fpu.h" //floating point ops in ISR
+#include "driverlib/gpio.h" //GPIO config ops
+#include "driverlib/pin_map.h" //GPIO pin defines
+#include "driverlib/interrupt.h" //interrupt ops
+#include "driverlib/sysctl.h" // peripheral lists
+#include "driverlib/uart.h" //uart
 #include "driverlib/rom.h"
-#include "driverlib/adc.h"
-#include "driverlib/i2c.h"
+#include "driverlib/i2c.h" //internal i2c op
 
-#include "grlib/grlib.h"
-#include "utils/uartstdio.h"
+#include "grlib/grlib.h" //drawing ops
 
-#include "drivers/cfal96x64x16.h"
-#include "drivers/buttons.h"
 
+#include "drivers/cfal96x64x16.h" //OLED Driver
+#include "drivers/buttons.h" //button enum
+
+/***** includes needed for the MPU ********/
 #include "sensorlib/hw_mpu9150.h"
 #include "sensorlib/hw_ak8975.h"
 #include "sensorlib/i2cm_drv.h"
 #include "sensorlib/ak8975.h"
-#include "sensorlib/mpu9150.h"
+#include "sensorlib/mpu9150.h" 
+/*****end includes needed for the MPU ********/
 
-#include "mrbUtil/cec322util.h"
-#include "mrbUtil/cec322peripherals.h"
-#include "mrbUtil/queue.h"
-#include "mrbUtil/i2cwrite.h"
+
+#include "mrbUtil/cec322util.h" //menu ops
+#include "mrbUtil/cec322peripherals.h" //display and configure ops
+
+
+#include "mrbUtil/data_structs/queue.h" //queue for the UART
+#include "mrbUtil/data_structs/buffer.h" //circular buffer for the MPU
 
 #include "lbHeaders/lb_buttons.h"
+
 #include "lbHeaders/graphics/luke_graphics.h"
 #include "lbHeaders/graphics/asteroids_graphics.h"
 
@@ -71,54 +63,49 @@
 #include "lbHeaders/Game/bullet.h"
 #include "lbHeaders/Game/spaceship.h"
 
-#include "lbHeaders/lb_buttons.h"
-#include "lbHeaders/graphics/luke_graphics.h"
-#include "lbHeaders/graphics/asteroids_graphics.h"
 
 #define ONE_KHZ_LOAD 80000
 #define SIXTYFOUR_FPS 1250000
 #define EIGHTY_MHZ
 #define M_PI 3.14159265359
 #define M_G 9.80665
-#define MAX_BUF_SZ 16
 #define DEBUG_MODE USER_TOGGLE_1
 #define DISPLAY_MODE_CYCLER USER_TOGGLE_2
 #define ACCELDATA_NORM 1
 #define OFF_SCREEN_BUF_SZ GrOffScreen8BPPSize(96,64)
 
+/***************** End Includes ************/
+
+/***************** Prototypes and struct defs *********************************/
 typedef enum disp {
   level, game, numDisp, numModes } displayMode;
 
-typedef struct buf {
-  float fbuf[MAX_BUF_SZ];
-  uint16_t currentIndex;
-  uint16_t valuesInBuffer;
-} CircularBuffer;
-
-void addValueToBuffer(CircularBuffer* buf, float valueToAdd);
-float averageBuffer(CircularBuffer* buf);
-CircularBuffer newBuffer();
 void enableTimers(void);
 void Timer0InterruptHandler(void);
-
 void initI2C();
-/***************** End Includes ************/
+void UARTIntHandler(void);
+void buttonsISR(void);
+void MPU9150I2CIntHandler(void);
+
+void MPU9150Callback(void *pvCallbackData, uint_fast8_t ui8Status);
+void configureMPU(tI2CMInstance *thisI2C, tMPU9150 *thisMPU, uint8_t adr);
+void getMPUDataAccel(tMPU9150 *thisMPU, float* accelArray);
+void getMPUDataGyro(tMPU9150 *thisMPU, float* gyroArray);
+void debugWriteToOLED(float* accelData, float* gyroData);
+void bubbleLevel(float* accelData, Point* location);
+
+void runAsteroids(void);
+void initAsterioids(Spaceship *mySpaceship, Asteroid Asteroids[],
+                    Asteroid asteroidsSM[],  Bullet bullets[]); 
+/************** End Prototypes and struct defs ********************************/
 
 /*begin globals*/
 Queue UARTQueue;
 uint8_t booleanToggles = START_STATE;
 volatile bool g_MPUDone = false;
-void MPU9150Callback(void *pvCallbackData, uint_fast8_t ui8Status);
-void configureMPU(tI2CMInstance *thisI2C, tMPU9150 *thisMPU, uint8_t adr);
-void getMPUDataAccel(tMPU9150 *thisMPU, float* accelArray);
-void getMPUDataGyro(tMPU9150 *thisMPU, float* gyroArray);
-void MPU9150I2CIntHandler(void);
-void debugWriteToOLED(float* accelData, float* gyroData);
-void bubbleLevel(float* accelData, Point* location);
-void runAsteroids(void);
 tContext g_sContext; /* global OLED sContext */
 tDisplay g_sOffScreen; /* offscreen buffer in SRAM to reduce flickering */
-uint8_t pui8_offscreenbuffer[OFF_SCREEN_BUF_SZ]; /*color palette array */
+
 uint32_t g_pui8Palette[7] = {
   ClrBlack,
   ClrWhite,
@@ -128,8 +115,8 @@ uint32_t g_pui8Palette[7] = {
   ClrGreen,
   ClrSilver
 };
+uint8_t pui8_offscreenbuffer[OFF_SCREEN_BUF_SZ];
 /* an a toggle related to the screen overwrites in the offscreen buffer */
-bool shouldClearScreen; 
 #define NUM_PALETTE_ENTRIES sizeof(g_pui8Palette) / sizeof(uint32_t)
 
 tI2CMInstance MPUI2C; /* MPU I2C Global Instance */
@@ -139,6 +126,9 @@ float g_accelData[3];
 /*This should really be define constants or an enum instead of an array*/
 uint8_t asteroidFlags[4] = {0x01, 0x02, 0x04, 0x08}; /* left, right, shoot */
 uint8_t asteroidFlagsEnabled = 0x00;
+bool shouldClearScreen;
+/************************ End Globals ****************************************/
+
 //*****************************************************************************
 //
 // The error routine that is called if the driver library encounters an error.
@@ -151,34 +141,11 @@ __error__(char *pcFilename, uint32_t ui32Line)
 }
 #endif
 
-void
-UARTIntHandler(void)
-{
-  uint32_t tempChar;
-  uint32_t ui32Status = UARTIntStatus(UART0_BASE, true);
-  //
-  // Clear the asserted interrupts.
-  //
-  UARTIntClear(UART0_BASE, ui32Status);
-  
-  //
-  // Loop while there are characters in the receive FIFO.
-  //
-  while(UARTCharsAvail(UART0_BASE))
-  {
-    //
-    // Read the next character from the UART and enqueue it
-    //
-    tempChar = UARTCharGetNonBlocking(UART0_BASE);
-    if(tempChar != -1) {
-      enqueue(&UARTQueue,tempChar);
-    }
-  }
-}
+
 
 int main(void)
 {
-  
+  /**** configure the intial op state of the machine ****/
   FPULazyStackingEnable();
 #ifdef EIGHTY_MHZ
   /* set the clock to run at 80MHZ */
@@ -188,6 +155,7 @@ int main(void)
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                  SYSCTL_XTAL_16MHZ);
 #endif
+  /****end configure the intial op state of the machine ****/
   const char* userToggles[4];
   uint8_t sizes[4];
   const uint8_t prompts = 2;
@@ -198,10 +166,10 @@ int main(void)
   tMPU9150 MPU;
   float accelData[3];
   float gyroData[3];
-  shouldClearScreen = true;
   Point bubble;
   bubble.x = 0;
   bubble.y = 0;
+  /*color palette array */
   //-----------------------------------------
   
   
@@ -212,7 +180,6 @@ int main(void)
   configureUART();
   initDisplay(&g_sContext);
   displaySplashAnimated(&g_sContext);
-  //clearDisplay(&g_sContext, false);
   UARTQueue = newQueue();
   enableTimers();
   configureButtons();
@@ -220,7 +187,7 @@ int main(void)
   /*End Periph Enables*/
   
   /* Configure the off screen buffer */ 
-    GrOffScreen8BPPInit(&g_sOffScreen, pui8_offscreenbuffer, 96, 64);
+  GrOffScreen8BPPInit(&g_sOffScreen, pui8_offscreenbuffer, 96, 64); 
   GrOffScreen8BPPPaletteSet(&g_sOffScreen, g_pui8Palette, 0 
                             ,NUM_PALETTE_ENTRIES);
   /* end off screen buffer config */
@@ -236,10 +203,13 @@ int main(void)
   configureMPU(&MPUI2C, &MPU, 0x69);
   /* End Enable MPU */
   
+  shouldClearScreen = true;
   while(!(booleanToggles & QUIT)) {
-    GrContextInit(&g_sContext, &g_sOffScreen);
-    if (shouldClearScreen) {
-        clearDisplay(&g_sContext, false);
+    //point the drawing context at the off screen buffer
+
+    if (shouldClearScreen == true) { 
+      GrContextInit(&g_sContext, &g_sOffScreen);
+      clearDisplay(&g_sContext, false);
     }
     getMPUDataAccel(&MPU, g_accelData);
     if(peek(&UARTQueue) != -1) {
@@ -252,7 +222,6 @@ int main(void)
       booleanToggles ^= DISPLAY_SPLASH;
       IntMasterDisable();
       displaySplashAnimated(&g_sContext);
-      //clearDisplay(&g_sContext, false);
       IntMasterEnable();
     }
     if (booleanToggles & PRINT_MENU) {
@@ -279,52 +248,75 @@ int main(void)
     switch (dispMode) {
     case level:
       bubbleLevel(g_accelData, &bubble);
-      //clearScreen(&g_sContext);
       drawCircle(&g_sContext, &bubble, 3);
-      break; /* TODO */
+      break; 
     case game:
-      break; /* TODO */
+      break; 
     case numDisp:
       debugWriteToOLED(g_accelData, gyroData);
       break;
     }
-     GrContextInit(&g_sContext, &g_sCFAL96x64x16); 
-     GrImageDraw(&g_sContext, g_sOffScreen.pvDisplayData, 0, 0);
-     
+    if (shouldClearScreen) {
+      IntMasterDisable();
+      //point the drawing context at the OLED
+      GrContextInit(&g_sContext, &g_sCFAL96x64x16);   
+      //draw the data from the off screen buffer
+      GrImageDraw(&g_sContext, g_sOffScreen.pvDisplayData, 0, 0);
+      IntMasterEnable();
+    }
   }
 }
-
+/*
+* Function Name: Timer0InterruptHander
+* Purpose: drives the asteriod framerate when requried
+* Inputs: none
+* Outputs: none
+* Notes: only important during asteroids ops
+*/
 void Timer0InterruptHandler(void) {
   TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
   if (dispMode == game)
     runAsteroids();
-  else {
-    shouldClearScreen = true;
-  }
 }
 
+/*
+* Function Name: initAsteriods
+* Purpose: initalizes the arrays and structs requried to run an asteroids game
+* Inputs: a spaceship pointer, two asteroid arrays, and a bullet array
+* Outputs: none
+* Notes: relies on defines for length checking. not the greatest code style but
+*        functional
+*/
+void initAsterioids(Spaceship* mySpaceship, Asteroid asteroids[]
+                    ,Asteroid asteroidsSM[],  Bullet bullets[]) {
+                      *mySpaceship = newSpaceship();
+                      shouldClearScreen = true;
+                      for (int i = 0; i < MD_ASTEROIDS; i++) {
+                        asteroids[i] = newAsteroid();
+                        asteroids[i].sprite.center = newPoint(60 * V_MOD, 56 * V_MOD);
+                        asteroids[i].sprite.velocity = newPoint(-3, 2);
+                        asteroids[i].sprite.isAlive = 1;
+                        
+                        /* allocate small asteroids */
+                        asteroidsSM[i * 2] = newAsteroid();
+                        asteroidsSM[i * 2 + 1] = newAsteroid();
+                      }
+                      mySpaceship->sprite.isAlive = 1;
+                      /* allocate bullets */
+                      for (int i = 0; i < MAX_BULLETS; i++) {
+                        bullets[i] = newBullet(mySpaceship);
+                        bullets[i].sprite.isAlive = 0;
+                      }
+                    }
 
-void initAsterioids(Spaceship& mySpaceship, Asteroid Asteroids[]
-                    Asteroid asteroidsSM[],  Bullet bullets[]) {
-    *mySpaceship = newSpaceship();
-    for (int i = 0; i < MD_ASTEROIDS; i++) {
-      asteroids[i] = newAsteroid();
-      asteroids[i].sprite.center = newPoint(60 * V_MOD, 56 * V_MOD);
-      asteroids[i].sprite.velocity = newPoint(-3, 2);
-      asteroids[i].sprite.isAlive = 1;
-      
-      /* allocate small asteroids */
-      asteroidsSM[i * 2] = newAsteroid();
-      asteroidsSM[i * 2 + 1] = newAsteroid();
-    }
-    mySpaceship.sprite.isAlive = 1;
-    /* allocate bullets */
-    for (int i = 0; i < MAX_BULLETS; i++) {
-      bullets[i] = newBullet(&mySpaceship);
-      bullets[i].sprite.isAlive = 0;
-    }
-}
-
+/*
+* Function Name: runAsteroids
+* Purpose: driver for the asterioids game
+* Inputs: none
+* Outputs: none
+* Notes: Should probably be modularized some more. meant to be called at a set
+*        Rate in an ISR
+*/
 void runAsteroids(void) {
   /* create spaceship sprite */
   static Spaceship mySpaceship;
@@ -338,16 +330,15 @@ void runAsteroids(void) {
   static uint8_t bulletCounter = 0;
   Point accelVector;
   if (onload) {
-    initAsteriods(&mySpaceShip, asteroids, asteroidsSM, bullets);
+    initAsterioids(&mySpaceship, asteroids, asteroidsSM, bullets);
     onload ^= onload;
   } else {
-    //clearScreen(&g_sContext);
     
     /* accelerate the spaceship */
-    /* accelerometer data is updated in main while(1) */
+    /* accelerometer data is updated in main psuedo-inifinte loop */
     /* generate and output vector */
-     accelVector = newPoint((int16_t)(g_accelData[0])
-                                 , (int16_t)(g_accelData[1]));
+    accelVector = newPoint((int16_t)(g_accelData[0])
+                           , (int16_t)(g_accelData[1]));
     accelerate(&mySpaceship.sprite, &accelVector);
     move(&mySpaceship.sprite);
     
@@ -362,7 +353,7 @@ void runAsteroids(void) {
     }
     
     
-    /* kill old bullets and inc life*/
+    /* kill old bullets and increment life*/
     for (int i = 0; i < MAX_BULLETS; i++) {
       bullets[i].timeAlive++;
       move(&bullets[i].sprite);
@@ -381,37 +372,39 @@ void runAsteroids(void) {
     /* test asteroid collisions */
     for (int i = 0; i < MD_ASTEROIDS; i++) {
       move(&asteroids[i].sprite);
-      if (isCollided(&asteroids[i].sprite, &mySpaceship.sprite)
-          && asteroids[i].sprite.isAlive) {
-        mySpaceship.sprite.isAlive = 0; /* kill it */
-      }
+      if (asteroids[i].sprite.isAlive
+          && isCollided(&asteroids[i].sprite, &mySpaceship.sprite)) {
+            mySpaceship.sprite.isAlive = 0; /* kill it */
+          }
+      
       /* test bullet collisions */
       for (int j = 0; j < MAX_BULLETS; j++) {
         if (isCollided(&asteroids[i].sprite, &bullets[j].sprite)
             && bullets[j].sprite.isAlive  && asteroids[i].sprite.isAlive) {
-          asteroids[i].sprite.isAlive = 0;
-          bullets[j].sprite.isAlive = 0;
-          /* spawn new asteroids */
-          asteroidsSM[i * 2] = newSMAsteroid(&asteroids[i].sprite.center);
-          asteroidsSM[i * 2 + 1] = newSMAsteroid(&asteroids[i].sprite.center);
-          asteroidsSM[i * 2].sprite.isAlive = 1;
-          asteroidsSM[i * 2 + 1].sprite.isAlive = 1;
-        }
+              asteroids[i].sprite.isAlive = 0;
+              bullets[j].sprite.isAlive = 0;
+              /* spawn new asteroids */
+              asteroidsSM[i * 2] = newSMAsteroid(&asteroids[i].sprite.center);
+              asteroidsSM[i * 2 + 1] = newSMAsteroid(&asteroids[i].sprite.center);
+              asteroidsSM[i * 2].sprite.isAlive = 1;
+              asteroidsSM[i * 2 + 1].sprite.isAlive = 1;
+            }
       }
       displaySprite(&g_sContext, &(asteroids[i].sprite), 0, 0x0);
     }
     
     /* process small asteroids */
     for (int i = 0; i < MD_ASTEROIDS * 2; i++) {
-      if (isCollided(&asteroidsSM[i].sprite, &mySpaceship.sprite) && asteroidsSM[i].sprite.isAlive) {
-        mySpaceship.sprite.isAlive = 0; /* kill it */
-      }
+      if (isCollided(&asteroidsSM[i].sprite, &mySpaceship.sprite)
+          && asteroidsSM[i].sprite.isAlive) {
+            mySpaceship.sprite.isAlive = 0; /* kill it */
+          }
       for (int j = 0; j < MAX_BULLETS; j++) {
-        if (isCollided(&asteroidsSM[i].sprite, &bullets[j].sprite) && bullets[j].sprite.isAlive
-            && asteroidsSM[i].sprite.isAlive) {
-          asteroidsSM[i].sprite.isAlive = 0;
-          bullets[j].sprite.isAlive = 0;
-        }
+        if (isCollided(&asteroidsSM[i].sprite, &bullets[j].sprite)
+            && bullets[j].sprite.isAlive && asteroidsSM[i].sprite.isAlive) {
+              asteroidsSM[i].sprite.isAlive = 0;
+              bullets[j].sprite.isAlive = 0;
+            }
       }
       move(&asteroidsSM[i].sprite);
       displaySprite(&g_sContext, &(asteroidsSM[i].sprite), 0, 0x0);
@@ -430,9 +423,10 @@ void runAsteroids(void) {
       mySpaceship.sprite.isAlive = 1;
       /* TODO: updates lives text */
     }
+    
     displayLives(&g_sContext, mySpaceship.lives);
     if (mySpaceship.lives == 0) {
-      ShouldClearScreen = false;
+      shouldClearScreen = false;
       displayTextToOLED(&g_sContext, OLED_TEXT_LINE1, "Game over.");
       displayTextToOLED(&g_sContext, OLED_TEXT_LINE2, "Up to Reset");
       TimerDisable(TIMER0_BASE, TIMER_A);
@@ -498,7 +492,7 @@ void initI2C() {
   GPIOPinTypeI2C(GPIO_PORTD_BASE, GPIO_PIN_1);
   GPIOPinConfigure(GPIO_PD1_I2C3SDA);
   
-  
+  /* confogure the GPIO points and their interrupt conditions */
   GPIOPinTypeGPIOInput(GPIO_PORTB_BASE, GPIO_PIN_2);
   GPIOIntEnable(GPIO_PORTB_BASE, GPIO_PIN_2);
   GPIOIntTypeSet(GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_FALLING_EDGE);
@@ -573,7 +567,6 @@ void getMPUDataAccel(tMPU9150 *thisMPU, float* accelArray) {
   static CircularBuffer yBuff;
   static CircularBuffer zBuff;
   static float dataArray[3];
-  static float averageArray[3];
   int i = 0;
   MPU9150DataRead(thisMPU, MPU9150Callback, 0);
   if(hasRun == false) {
@@ -666,27 +659,6 @@ void debugWriteToOLED(float* accelData, float* gyroData) {
 }
 
 
-void addValueToBuffer(CircularBuffer* buf, float valueToAdd) {
-  buf->fbuf[buf->currentIndex] = valueToAdd;
-  buf->currentIndex = (buf->currentIndex+1) % MAX_BUF_SZ;
-  if(buf->valuesInBuffer < MAX_BUF_SZ) {
-    buf->valuesInBuffer++;
-  }
-}
-float averageBuffer(CircularBuffer* buf) {
-  float average;
-  uint16_t i = 0;
-  for(i = 0; i < buf->valuesInBuffer; i++) {
-    average += buf->fbuf[i];
-  }
-  return average/buf->valuesInBuffer;
-}
-CircularBuffer newBuffer() {
-  CircularBuffer newBuff;
-  newBuff.currentIndex = 0;
-  newBuff.valuesInBuffer = 0;
-  return newBuff;
-}
 
 /*
 * Function: buttonsISR
@@ -710,6 +682,29 @@ void buttonsISR() {
   if (detectButtonPresses() == UP_BUTTON) {
     /* flag reset game */
     asteroidFlagsEnabled ^= asteroidFlags[3];
-    shouldClearScreen = true;
+  }
+}
+
+void UARTIntHandler(void)
+{
+  uint32_t tempChar;
+  uint32_t ui32Status = UARTIntStatus(UART0_BASE, true);
+  //
+  // Clear the asserted interrupts.
+  //
+  UARTIntClear(UART0_BASE, ui32Status);
+  
+  //
+  // Loop while there are characters in the receive FIFO.
+  //
+  while(UARTCharsAvail(UART0_BASE))
+  {
+    //
+    // Read the next character from the UART and enqueue it
+    //
+    tempChar = UARTCharGetNonBlocking(UART0_BASE);
+    if(tempChar != -1) {
+      enqueue(&UARTQueue,tempChar);
+    }
   }
 }

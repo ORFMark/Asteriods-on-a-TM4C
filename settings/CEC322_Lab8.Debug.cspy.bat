@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.general.xcl" --backend -f "H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.general.xcl" --backend -f "C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.general.xcl" "--debug_file=%~1" --backend -f "H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\settings\CEC322_Lab8.Debug.driver.xcl" 
 
 @echo off 
 :end

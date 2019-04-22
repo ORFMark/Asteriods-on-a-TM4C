@@ -1,54 +1,38 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.70.1.11437/W32 for ARM                02/Apr/2019  15:42:44
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                08/Apr/2019  14:36:52
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  
-#        H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out
 #    Map file     =  
-#        H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\List\uart_echo.map
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\List\uart_echo.map
 #    Command line =  
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\asteroids.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\asteroids_graphics.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\bullet.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cec322Peripherals.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cec322Util.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cfal96x64x16.o"
-#        "H:\Spring 2019\CEC322\Code\driverlib\ewarm\Exe\driverlib.a"
-#        "H:\Spring 2019\CEC322\Code\grlib\ewarm\Exe\grlib.a" "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\i2cwrite.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\Lab_8_Main.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\lb_buttons.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\luke_graphics.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\pm_images.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\queue.o"
-#        "H:\Spring 2019\CEC322\Code\sensorlib\ewarm\Exe\sensorlib.a"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\spaceship.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\sprite.o"
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\startup_ewarm.o"
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\asteroids.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\asteroids_graphics.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\buffer.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\bullet.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cec322Peripherals.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cec322Util.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\cfal96x64x16.o
+#        C:\Users\Mark\Documents\CEC322\driverlib\ewarm\Exe\driverlib.a
+#        C:\Users\Mark\Documents\CEC322\grlib\ewarm\Exe\grlib.a
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\i2cwrite.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\Lab_8_Main.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\lb_buttons.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\luke_graphics.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\pm_images.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\queue.o
+#        C:\Users\Mark\Documents\CEC322\sensorlib\ewarm\Exe\sensorlib.a
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\spaceship.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\sprite.o
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj\startup_ewarm.o
 #        --redirect _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o
-#        "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out"
-#        --map "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\List\uart_echo.map"
-#        --config "H:\Spring
-#        2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\CEC322_Lab8.icf"
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out
+#        --map
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\List\uart_echo.map
+#        --config
+#        C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\CEC322_Lab8.icf
 #        --semihosting --entry __iar_program_start --vfe
 #
 ###############################################################################
@@ -78,111 +62,110 @@ initialize by copy { rw };
   .intvec             const    0x00000000   0x26c  startup_ewarm.o [1]
                              - 0x0000026c   0x26c
 
-"P1":                                      0x6f28
-  .text               ro code  0x0000026c   0xf50  Lab_8_Main.o [1]
-  .text               ro code  0x000011bc   0x1a4  uart.o [4]
-  .text               ro code  0x00001360    0xc0  queue.o [1]
-  .text               ro code  0x00001420    0x10  fpu.o [4]
-  .text               ro code  0x00001430   0x2e4  sysctl.o [4]
-  .text               ro code  0x00001714   0x188  interrupt.o [4]
-  .text               ro code  0x0000189c   0x2c8  cec322Util.o [1]
-  .text               ro code  0x00001b64   0x118  cec322Peripherals.o [1]
-  .text               ro code  0x00001c7c    0x56  ABImemcpy_unaligned.o [7]
-  .text               ro code  0x00001cd2     0xa  xsprout.o [3]
-  .text               ro code  0x00001cdc   0x2ce  offscr8bpp.o [5]
-  .text               ro code  0x00001fac    0x78  context.o [5]
-  .text               ro code  0x00002024   0x22a  luke_graphics.o [1]
-  .text               ro code  0x00002250   0x19c  timer.o [4]
-  .text               ro code  0x000023ec   0x5c0  image.o [5]
-  .text               ro code  0x000029ac    0x6e  spaceship.o [1]
-  .text               ro code  0x00002a1a    0xa2  asteroids.o [1]
-  .text               ro code  0x00002abc    0xe0  bullet.o [1]
-  .text               ro code  0x00002b9c   0x1ce  sprite.o [1]
-  .text               ro code  0x00002d6c   0x378  asteroids_graphics.o [1]
-  .text               ro code  0x000030e4   0x2e0  gpio.o [4]
-  .text               ro code  0x000033c4    0x8c  i2c.o [4]
-  .text               ro code  0x00003450   0x42c  i2cm_drv.o [8]
-  .text               ro code  0x0000387c   0x2ac  mpu9150.o [8]
-  .text               ro code  0x00003b28    0x30  I32ToDbl.o [6]
-  .text               ro code  0x00003b58   0x256  DblDiv.o [6]
-  .text               ro code  0x00003db0    0x90  DblToFlt.o [6]
-  .text               ro code  0x00003e40    0xb2  rectangle.o [5]
-  .text               ro code  0x00003ef4    0x4e  FltToDbl.o [6]
-  .text               ro code  0x00003f44   0x1a2  DblMul.o [6]
-  .text               ro code  0x000040e8    0xe8  DblAdd.o [6]
-  .text               ro code  0x000041d0    0x4c  DblToI32.o [6]
-  .text               ro code  0x0000421c    0x34  sprintf.o [3]
-  .text               ro code  0x00004250    0x18  lb_buttons.o [1]
-  .text               ro code  0x00004268    0x10  cpu.o [4]
-  .text               ro code  0x00004278   0x4ea  string.o [5]
-  .text               ro code  0x00004764    0x24  cec322Util.o [1]
-  .text               ro code  0x00004788     0x8  abs.o [3]
-  .text               ro code  0x00004790   0x588  cfal96x64x16.o [1]
-  .text               ro code  0x00004d18   0x11c  circle.o [5]
-  .text               ro code  0x00004e34     0x6  ABImemclr4.o [7]
-  .text               ro code  0x00004e3a    0x12  cos.o [6]
-  .text               ro code  0x00004e4c    0x12  sin.o [6]
-  .text               ro code  0x00004e60   0x100  sqrt.o [6]
-  .text               ro code  0x00004f60    0xe0  rand.o [3]
-  .text               ro code  0x00005040   0x180  DblSub.o [6]
-  .text               ro code  0x000051c0   0x272  line.o [5]
-  .text               ro code  0x00005432    0x1e  mpu9150.o [8]
-  .text               ro code  0x00005450    0x20  mpu9150.o [8]
-  .text               ro code  0x00005470   0x14e  xprintftiny.o [3]
-  .text               ro code  0x000055c0    0x32  ABImemset48.o [7]
-  .text               ro code  0x000055f4   0x448  xsin.o [6]
-  .text               ro code  0x00005a3c     0xc  iarEdom.o [7]
-  .text               ro code  0x00005a48     0x2  xtls.o [3]
-  .text               ro code  0x00005a4c    0x36  strlen.o [7]
-  .text               ro code  0x00005a84    0x2e  DblCmpLe.o [6]
-  .text               ro code  0x00005ab4    0x2e  DblCmpGe.o [6]
-  .text               ro code  0x00005ae4     0xc  errno.o [3]
-  .text               ro code  0x00005af0   0x168  xquad.o [6]
-  .text               ro code  0x00005c58    0x7a  xdint.o [6]
-  .text               ro code  0x00005cd4    0x20  DblCmpEq.o [6]
-  .text               ro code  0x00005cf4   0x1a8  fmod.o [6]
-  .rodata             const    0x00005e9c   0x628  fontcm12.o [5]
-  .rodata             const    0x000064c4   0x3c4  pm_images.o [1]
-  .rodata             const    0x00006888   0x3c0  pm_images.o [1]
-  .rodata             const    0x00006c48   0x1f8  pm_images.o [1]
-  .text               ro code  0x00006e40    0x40  zero_init3.o [7]
-  .text               ro code  0x00006e80    0x38  packbits_init_single.o [7]
-  .rodata             const    0x00006eb8    0x34  cec322Util.o [1]
-  .rodata             const    0x00006eec    0x28  cfal96x64x16.o [1]
-  .text               ro code  0x00006f14    0x28  data_init.o [7]
-  .text               ro code  0x00006f3c    0x22  fpinit_M.o [6]
-  .iar.init_table     const    0x00006f60    0x28  - Linker created -
-  .rodata             const    0x00006f88    0x20  cec322Util.o [1]
-  .text               ro code  0x00006fa8    0x1e  startup_ewarm.o [1]
-  .text               ro code  0x00006fc6     0xc  cstartup_M.o [7]
-  .text               ro code  0x00006fd4    0x1a  cmain.o [7]
-  .text               ro code  0x00006fee     0x4  low_level_init.o [3]
-  .text               ro code  0x00006ff2     0x4  exit.o [3]
-  .text               ro code  0x00006ff8     0xa  cexit.o [7]
-  .text               ro code  0x00007004    0x14  exit.o [9]
-  .rodata             const    0x00007018    0x1c  Lab_8_Main.o [1]
-  .rodata             const    0x00007034    0x1c  Lab_8_Main.o [1]
-  .rodata             const    0x00007050    0x18  cec322Util.o [1]
-  .rodata             const    0x00007068    0x18  cec322Util.o [1]
-  .rodata             const    0x00007080    0x18  cec322Util.o [1]
-  .rodata             const    0x00007098    0x18  cec322Util.o [1]
-  .rodata             const    0x000070b0    0x18  cec322Util.o [1]
-  .rodata             const    0x000070c8    0x14  Lab_8_Main.o [1]
-  .rodata             const    0x000070dc     0xc  cec322Util.o [1]
-  .rodata             const    0x000070e8     0xc  cec322Util.o [1]
-  .rodata             const    0x000070f4     0xc  cec322Util.o [1]
-  .rodata             const    0x00007100     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x0000710c     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x00007118     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x00007124     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x00007130     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x0000713c     0xc  Lab_8_Main.o [1]
-  .rodata             const    0x00007148     0x8  cec322Util.o [1]
-  .text               ro code  0x00007150     0x8  charmap.o [5]
-  .rodata             const    0x00007158     0x0  zero_init3.o [7]
-  .rodata             const    0x00007158     0x0  packbits_init_single.o [7]
-  Initializer bytes   const    0x00007158    0x3c  <for P2-1>
-                             - 0x00007194  0x6f28
+"P1":                                      0x6e74
+  .text               ro code  0x0000026c   0xed4  Lab_8_Main.o [1]
+  .text               ro code  0x00001140    0x10  fpu.o [4]
+  .text               ro code  0x00001150   0x2e4  sysctl.o [4]
+  .text               ro code  0x00001434   0x188  interrupt.o [4]
+  .text               ro code  0x000015bc   0x248  cec322Util.o [1]
+  .text               ro code  0x00001804   0x118  cec322Peripherals.o [1]
+  .text               ro code  0x0000191c   0x22a  luke_graphics.o [1]
+  .text               ro code  0x00001b46    0xc0  queue.o [1]
+  .text               ro code  0x00001c06     0xa  xsprout.o [3]
+  .text               ro code  0x00001c10    0x56  ABImemcpy_unaligned.o [7]
+  .text               ro code  0x00001c68   0x2ce  offscr8bpp.o [5]
+  .text               ro code  0x00001f38   0x1a4  uart.o [4]
+  .text               ro code  0x000020dc    0x78  context.o [5]
+  .text               ro code  0x00002154   0x19c  timer.o [4]
+  .text               ro code  0x000022f0   0x5c0  image.o [5]
+  .text               ro code  0x000028b0    0x6e  spaceship.o [1]
+  .text               ro code  0x0000291e    0xa6  asteroids.o [1]
+  .text               ro code  0x000029c4    0xe0  bullet.o [1]
+  .text               ro code  0x00002aa4   0x1c6  sprite.o [1]
+  .text               ro code  0x00002c6c   0x378  asteroids_graphics.o [1]
+  .text               ro code  0x00002fe4   0x2e0  gpio.o [4]
+  .text               ro code  0x000032c4    0x8c  i2c.o [4]
+  .text               ro code  0x00003350   0x42c  i2cm_drv.o [8]
+  .text               ro code  0x0000377c   0x2ac  mpu9150.o [8]
+  .text               ro code  0x00003a28    0x86  buffer.o [1]
+  .text               ro code  0x00003ab0    0x30  I32ToDbl.o [6]
+  .text               ro code  0x00003ae0   0x256  DblDiv.o [6]
+  .text               ro code  0x00003d38    0x90  DblToFlt.o [6]
+  .text               ro code  0x00003dc8    0xb2  rectangle.o [5]
+  .text               ro code  0x00003e7c    0x4e  FltToDbl.o [6]
+  .text               ro code  0x00003ecc   0x1a2  DblMul.o [6]
+  .text               ro code  0x00004070    0xe8  DblAdd.o [6]
+  .text               ro code  0x00004158    0x4c  DblToI32.o [6]
+  .text               ro code  0x000041a4    0x34  sprintf.o [3]
+  .text               ro code  0x000041d8    0x18  lb_buttons.o [1]
+  .text               ro code  0x000041f0    0x10  cpu.o [4]
+  .text               ro code  0x00004200     0x8  abs.o [3]
+  .text               ro code  0x00004208   0x588  cfal96x64x16.o [1]
+  .text               ro code  0x00004790   0x4ea  string.o [5]
+  .text               ro code  0x00004c7a   0x11c  circle.o [5]
+  .text               ro code  0x00004d98     0x6  ABImemclr4.o [7]
+  .text               ro code  0x00004d9e    0x12  cos.o [6]
+  .text               ro code  0x00004db0    0x12  sin.o [6]
+  .text               ro code  0x00004dc4   0x100  sqrt.o [6]
+  .text               ro code  0x00004ec4    0xe0  rand.o [3]
+  .text               ro code  0x00004fa4   0x180  DblSub.o [6]
+  .text               ro code  0x00005124   0x272  line.o [5]
+  .text               ro code  0x00005396    0x1e  mpu9150.o [8]
+  .text               ro code  0x000053b4    0x20  mpu9150.o [8]
+  .text               ro code  0x000053d4   0x14e  xprintftiny.o [3]
+  .text               ro code  0x00005524    0x32  ABImemset48.o [7]
+  .text               ro code  0x00005558   0x448  xsin.o [6]
+  .text               ro code  0x000059a0     0xc  iarEdom.o [7]
+  .text               ro code  0x000059ac     0x2  xtls.o [3]
+  .text               ro code  0x000059b0    0x36  strlen.o [7]
+  .text               ro code  0x000059e8    0x2e  DblCmpLe.o [6]
+  .text               ro code  0x00005a18    0x2e  DblCmpGe.o [6]
+  .text               ro code  0x00005a48     0xc  errno.o [3]
+  .text               ro code  0x00005a54   0x168  xquad.o [6]
+  .text               ro code  0x00005bbc    0x7a  xdint.o [6]
+  .text               ro code  0x00005c38    0x20  DblCmpEq.o [6]
+  .text               ro code  0x00005c58   0x1a8  fmod.o [6]
+  .rodata             const    0x00005e00   0x628  fontcm12.o [5]
+  .rodata             const    0x00006428   0x3c4  pm_images.o [1]
+  .rodata             const    0x000067ec   0x3c0  pm_images.o [1]
+  .rodata             const    0x00006bac   0x1f8  pm_images.o [1]
+  .text               ro code  0x00006da4    0x40  zero_init3.o [7]
+  .text               ro code  0x00006de4    0x38  packbits_init_single.o [7]
+  .rodata             const    0x00006e1c    0x34  cec322Util.o [1]
+  .rodata             const    0x00006e50    0x28  cfal96x64x16.o [1]
+  .text               ro code  0x00006e78    0x28  data_init.o [7]
+  .text               ro code  0x00006ea0    0x22  fpinit_M.o [6]
+  .iar.init_table     const    0x00006ec4    0x28  - Linker created -
+  .rodata             const    0x00006eec    0x20  cec322Util.o [1]
+  .text               ro code  0x00006f0c    0x1e  startup_ewarm.o [1]
+  .text               ro code  0x00006f2a     0xc  cstartup_M.o [7]
+  .text               ro code  0x00006f38    0x1a  cmain.o [7]
+  .text               ro code  0x00006f52     0x4  low_level_init.o [3]
+  .text               ro code  0x00006f56     0x4  exit.o [3]
+  .text               ro code  0x00006f5c     0xa  cexit.o [7]
+  .text               ro code  0x00006f68    0x14  exit.o [9]
+  .rodata             const    0x00006f7c    0x1c  Lab_8_Main.o [1]
+  .rodata             const    0x00006f98    0x1c  Lab_8_Main.o [1]
+  .rodata             const    0x00006fb4    0x18  cec322Util.o [1]
+  .rodata             const    0x00006fcc    0x18  cec322Util.o [1]
+  .rodata             const    0x00006fe4    0x18  cec322Util.o [1]
+  .rodata             const    0x00006ffc    0x18  cec322Util.o [1]
+  .rodata             const    0x00007014    0x14  Lab_8_Main.o [1]
+  .rodata             const    0x00007028     0xc  cec322Util.o [1]
+  .rodata             const    0x00007034     0xc  cec322Util.o [1]
+  .rodata             const    0x00007040     0xc  cec322Util.o [1]
+  .rodata             const    0x0000704c     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x00007058     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x00007064     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x00007070     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x0000707c     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x00007088     0xc  Lab_8_Main.o [1]
+  .rodata             const    0x00007094     0x8  cec322Util.o [1]
+  .text               ro code  0x0000709c     0x8  charmap.o [5]
+  .rodata             const    0x000070a4     0x0  zero_init3.o [7]
+  .rodata             const    0x000070a4     0x0  packbits_init_single.o [7]
+  Initializer bytes   const    0x000070a4    0x3c  <for P2-1>
+                             - 0x000070e0  0x6e74
 
 "A1":                                       0x26c
   VTABLE              zero     0x20000000   0x26c  interrupt.o [4]
@@ -204,32 +187,32 @@ initialize by copy { rw };
   .noinit             uninit   0x20000334  0x1000  startup_ewarm.o [1]
                              - 0x20001334  0x1000
 
-"P2", part 3 of 3:                         0x21ec
+"P2", part 3 of 3:                         0x2288
   .bss                zero     0x20001334  0x1b08  Lab_8_Main.o [1]
-  .bss                zero     0x20002e3c   0x300  Lab_8_Main.o [1]
-  .bss                zero     0x2000313c   0x124  Lab_8_Main.o [1]
-  .bss                zero     0x20003260    0x90  Lab_8_Main.o [1]
-  .bss                zero     0x200032f0    0x60  Lab_8_Main.o [1]
-  .bss                zero     0x20003350    0x44  Lab_8_Main.o [1]
-  .bss                zero     0x20003394    0x44  Lab_8_Main.o [1]
-  .bss                zero     0x200033d8    0x44  Lab_8_Main.o [1]
-  .bss                zero     0x2000341c    0x30  Lab_8_Main.o [1]
-  .bss                zero     0x2000344c    0x2c  Lab_8_Main.o [1]
-  .bss                zero     0x20003478    0x28  Lab_8_Main.o [1]
-  .bss                zero     0x200034a0    0x20  cec322Util.o [1]
-  .bss                zero     0x200034c0    0x20  image.o [5]
-  .bss                zero     0x200034e0    0x18  Lab_8_Main.o [1]
-  .bss                zero     0x200034f8     0xc  Lab_8_Main.o [1]
-  .bss                zero     0x20003504     0xc  Lab_8_Main.o [1]
-  .bss                zero     0x20003510     0x4  cec322Util.o [1]
-  .bss                zero     0x20003514     0x4  context.o [5]
-  .bss                zero     0x20003518     0x1  Lab_8_Main.o [1]
-  .bss                zero     0x20003519     0x1  Lab_8_Main.o [1]
-  .bss                zero     0x2000351a     0x1  Lab_8_Main.o [1]
-  .bss                zero     0x2000351b     0x1  Lab_8_Main.o [1]
-  .bss                zero     0x2000351c     0x1  Lab_8_Main.o [1]
-  .bss                zero     0x2000351d     0x1  Lab_8_Main.o [1]
-                             - 0x2000351e  0x21ea
+  .bss                zero     0x20002e3c   0x380  Lab_8_Main.o [1]
+  .bss                zero     0x200031bc   0x124  Lab_8_Main.o [1]
+  .bss                zero     0x200032e0    0x90  Lab_8_Main.o [1]
+  .bss                zero     0x20003370    0x70  Lab_8_Main.o [1]
+  .bss                zero     0x200033e0    0x44  Lab_8_Main.o [1]
+  .bss                zero     0x20003424    0x44  Lab_8_Main.o [1]
+  .bss                zero     0x20003468    0x44  Lab_8_Main.o [1]
+  .bss                zero     0x200034ac    0x38  Lab_8_Main.o [1]
+  .bss                zero     0x200034e4    0x2c  Lab_8_Main.o [1]
+  .bss                zero     0x20003510    0x28  Lab_8_Main.o [1]
+  .bss                zero     0x20003538    0x20  cec322Util.o [1]
+  .bss                zero     0x20003558    0x20  image.o [5]
+  .bss                zero     0x20003578    0x1c  Lab_8_Main.o [1]
+  .bss                zero     0x20003594     0xc  Lab_8_Main.o [1]
+  .bss                zero     0x200035a0     0xc  Lab_8_Main.o [1]
+  .bss                zero     0x200035ac     0x4  cec322Util.o [1]
+  .bss                zero     0x200035b0     0x4  context.o [5]
+  .bss                zero     0x200035b4     0x1  Lab_8_Main.o [1]
+  .bss                zero     0x200035b5     0x1  Lab_8_Main.o [1]
+  .bss                zero     0x200035b6     0x1  Lab_8_Main.o [1]
+  .bss                zero     0x200035b7     0x1  Lab_8_Main.o [1]
+  .bss                zero     0x200035b8     0x1  Lab_8_Main.o [1]
+  .bss                zero     0x200035b9     0x1  Lab_8_Main.o [1]
+                             - 0x200035ba  0x2286
 
 
 *******************************************************************************
@@ -239,13 +222,13 @@ initialize by copy { rw };
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    2 destination ranges, total size 0x2456:
+    2 destination ranges, total size 0x24f2:
           0x20000000   0x26c
-          0x20001334  0x21ea
+          0x20001334  0x2286
 
 Copy/packbits (__iar_packbits_init_single3)
     1 source range, total size 0x3c (30% of destination):
-          0x00007158    0x3c
+          0x000070a4    0x3c
     1 destination range, total size 0xc7:
           0x2000026c    0xc7
 
@@ -257,23 +240,24 @@ Copy/packbits (__iar_packbits_init_single3)
 
     Module                  ro code  ro data  rw data
     ------                  -------  -------  -------
-H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj: [1]
-    Lab_8_Main.o              3 920      157    8 644
-    asteroids.o                 162
+C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj: [1]
+    Lab_8_Main.o              3 796      157    8 800
+    asteroids.o                 166
     asteroids_graphics.o        888
+    buffer.o                    134
     bullet.o                    224
     cec322Peripherals.o         280
-    cec322Util.o                748      248       37
+    cec322Util.o                584      224       37
     cfal96x64x16.o            1 416       46       20
     lb_buttons.o                 24
     luke_graphics.o             554
     pm_images.o                        2 428
     queue.o                     192
     spaceship.o                 110
-    sprite.o                    462
+    sprite.o                    454
     startup_ewarm.o              30      620    4 096
     -------------------------------------------------
-    Total:                    9 010    3 499   12 797
+    Total:                    8 852    3 475   12 953
 
 command line: [2]
     -------------------------------------------------
@@ -366,10 +350,10 @@ shb_l.a: [9]
     -------------------------------------------------
     Total:                       20
 
-    Gaps                         38        2
+    Gaps                         40        2
     Linker created                        41
 -----------------------------------------------------
-    Grand Total:             23 914    5 162   13 597
+    Grand Total:             23 758    5 138   13 753
 
 
 *******************************************************************************
@@ -378,329 +362,328 @@ shb_l.a: [9]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.iar.init_table$$Base   0x00006f60           --   Gb  - Linker created -
-.iar.init_table$$Limit  0x00006f88           --   Gb  - Linker created -
-?main                   0x00006fd5          Code  Gb  cmain.o [7]
+.iar.init_table$$Base   0x00006ec4           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00006eec           --   Gb  - Linker created -
+?main                   0x00006f39          Code  Gb  cmain.o [7]
 CFAL96x64x16ColorTranslate
-                        0x00004b6d    0x18  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16Flush       0x00004b85     0x2  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16Init        0x00004b87   0x15a  Code  Gb  cfal96x64x16.o [1]
-CFAL96x64x16LineDrawH   0x000049e3    0x9e  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16LineDrawV   0x00004a81    0xbe  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16PixelDraw   0x00004821    0x40  Code  Lc  cfal96x64x16.o [1]
+                        0x000045e5    0x18  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16Flush       0x000045fd     0x2  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16Init        0x000045ff   0x15a  Code  Gb  cfal96x64x16.o [1]
+CFAL96x64x16LineDrawH   0x0000445b    0x9e  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16LineDrawV   0x000044f9    0xbe  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16PixelDraw   0x00004299    0x40  Code  Lc  cfal96x64x16.o [1]
 CFAL96x64x16PixelDrawMultiple
-                        0x00004861   0x182  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16RectFill    0x00004b3f    0x2e  Code  Lc  cfal96x64x16.o [1]
+                        0x000042d9   0x182  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16RectFill    0x000045b7    0x2e  Code  Lc  cfal96x64x16.o [1]
 CFAL96x64x16WriteCommand
-                        0x00004791    0x48  Code  Lc  cfal96x64x16.o [1]
-CFAL96x64x16WriteData   0x000047d9    0x48  Code  Lc  cfal96x64x16.o [1]
-CPUcpsid                0x00004269     0x8  Code  Gb  cpu.o [4]
-CPUcpsie                0x00004271     0x8  Code  Gb  cpu.o [4]
-FPULazyStackingEnable   0x00001421     0xc  Code  Gb  fpu.o [4]
-FaultISR                0x00006fc3     0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet          0x000030e5    0x28  Code  Gb  gpio.o [4]
-GPIOIntClear            0x0000325d     0x6  Code  Gb  gpio.o [4]
-GPIOIntEnable           0x00003257     0x6  Code  Gb  gpio.o [4]
-GPIOIntTypeSet          0x0000310d    0x4c  Code  Gb  gpio.o [4]
-GPIOPadConfigSet        0x00003159    0xfe  Code  Gb  gpio.o [4]
-GPIOPinConfigure        0x000032ef    0x38  Code  Gb  gpio.o [4]
-GPIOPinRead             0x00003263     0x6  Code  Gb  gpio.o [4]
-GPIOPinTypeGPIOInput    0x00003273    0x14  Code  Gb  gpio.o [4]
-GPIOPinTypeGPIOOutput   0x00003287     0xa  Code  Gb  gpio.o [4]
-GPIOPinTypeI2C          0x000032a3    0x14  Code  Gb  gpio.o [4]
-GPIOPinTypeI2CSCL       0x000032b7    0x14  Code  Gb  gpio.o [4]
-GPIOPinTypeUART         0x000032d3    0x14  Code  Gb  gpio.o [4]
-GPIOPinWrite            0x00003269     0x6  Code  Gb  gpio.o [4]
-GrCircleFill            0x00004d19   0x11c  Code  Gb  circle.o [5]
-GrClipCodeGet           0x00005251    0x36  Code  Lc  line.o [5]
-GrContextFontSet        0x0000475f     0x4  Code  Gb  string.o [5]
-GrContextInit           0x00001fad    0x5e  Code  Gb  context.o [5]
+                        0x00004209    0x48  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16WriteData   0x00004251    0x48  Code  Lc  cfal96x64x16.o [1]
+CPUcpsid                0x000041f1     0x8  Code  Gb  cpu.o [4]
+CPUcpsie                0x000041f9     0x8  Code  Gb  cpu.o [4]
+FPULazyStackingEnable   0x00001141     0xc  Code  Gb  fpu.o [4]
+FaultISR                0x00006f27     0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00002fe5    0x28  Code  Gb  gpio.o [4]
+GPIOIntClear            0x0000315d     0x6  Code  Gb  gpio.o [4]
+GPIOIntEnable           0x00003157     0x6  Code  Gb  gpio.o [4]
+GPIOIntTypeSet          0x0000300d    0x4c  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00003059    0xfe  Code  Gb  gpio.o [4]
+GPIOPinConfigure        0x000031ef    0x38  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00003163     0x6  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00003173    0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00003187     0xa  Code  Gb  gpio.o [4]
+GPIOPinTypeI2C          0x000031a3    0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeI2CSCL       0x000031b7    0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x000031d3    0x14  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00003169     0x6  Code  Gb  gpio.o [4]
+GrCircleFill            0x00004c7b   0x11c  Code  Gb  circle.o [5]
+GrClipCodeGet           0x000051b5    0x36  Code  Lc  line.o [5]
+GrContextFontSet        0x00004c77     0x4  Code  Gb  string.o [5]
+GrContextInit           0x000020dd    0x5e  Code  Gb  context.o [5]
 GrDefaultStringRenderer
-                        0x000042f9    0xb2  Code  Gb  string.o [5]
-GrFontBaselineGet       0x00004651    0x18  Code  Gb  string.o [5]
-GrFontCodepageGet       0x00004703    0x1c  Code  Gb  string.o [5]
-GrFontGlyphDataGet      0x0000467f    0x84  Code  Gb  string.o [5]
-GrFontGlyphRender       0x000043db   0x21e  Code  Gb  string.o [5]
-GrFontInfoGet           0x00004627    0x2a  Code  Gb  string.o [5]
-GrImageDraw             0x0000299f     0x6  Code  Gb  image.o [5]
-GrLineClip              0x00005287    0xa8  Code  Lc  line.o [5]
-GrLineDraw              0x0000532f   0x104  Code  Gb  line.o [5]
-GrLineDrawH             0x000051c1    0x48  Code  Gb  line.o [5]
-GrLineDrawV             0x00005209    0x48  Code  Gb  line.o [5]
-GrMapISO8859_1_Unicode  0x00007151     0x8  Code  Gb  charmap.o [5]
+                        0x00004811    0xb2  Code  Gb  string.o [5]
+GrFontBaselineGet       0x00004b69    0x18  Code  Gb  string.o [5]
+GrFontCodepageGet       0x00004c1b    0x1c  Code  Gb  string.o [5]
+GrFontGlyphDataGet      0x00004b97    0x84  Code  Gb  string.o [5]
+GrFontGlyphRender       0x000048f3   0x21e  Code  Gb  string.o [5]
+GrFontInfoGet           0x00004b3f    0x2a  Code  Gb  string.o [5]
+GrImageDraw             0x000028a3     0x6  Code  Gb  image.o [5]
+GrLineClip              0x000051eb    0xa8  Code  Lc  line.o [5]
+GrLineDraw              0x00005293   0x104  Code  Gb  line.o [5]
+GrLineDrawH             0x00005125    0x48  Code  Gb  line.o [5]
+GrLineDrawV             0x0000516d    0x48  Code  Gb  line.o [5]
+GrMapISO8859_1_Unicode  0x0000709d     0x8  Code  Gb  charmap.o [5]
 GrOffScreen8BPPColorTranslate
-                        0x00001cdd    0x48  Code  Lc  offscr8bpp.o [5]
-GrOffScreen8BPPFlush    0x00001f25     0x2  Code  Lc  offscr8bpp.o [5]
-GrOffScreen8BPPInit     0x00001f27    0x3a  Code  Gb  offscr8bpp.o [5]
+                        0x00001c69    0x48  Code  Lc  offscr8bpp.o [5]
+GrOffScreen8BPPFlush    0x00001eb1     0x2  Code  Lc  offscr8bpp.o [5]
+GrOffScreen8BPPInit     0x00001eb3    0x3a  Code  Gb  offscr8bpp.o [5]
 GrOffScreen8BPPLineDrawH
-                        0x00001de3    0x5a  Code  Lc  offscr8bpp.o [5]
+                        0x00001d6f    0x5a  Code  Lc  offscr8bpp.o [5]
 GrOffScreen8BPPLineDrawV
-                        0x00001e3d    0x1a  Code  Lc  offscr8bpp.o [5]
+                        0x00001dc9    0x1a  Code  Lc  offscr8bpp.o [5]
 GrOffScreen8BPPPaletteSet
-                        0x00001f7d    0x2e  Code  Gb  offscr8bpp.o [5]
+                        0x00001f09    0x2e  Code  Gb  offscr8bpp.o [5]
 GrOffScreen8BPPPixelDraw
-                        0x00001d25     0xc  Code  Lc  offscr8bpp.o [5]
+                        0x00001cb1     0xc  Code  Lc  offscr8bpp.o [5]
 GrOffScreen8BPPPixelDrawMultiple
-                        0x00001d31    0xa4  Code  Lc  offscr8bpp.o [5]
+                        0x00001cbd    0xa4  Code  Lc  offscr8bpp.o [5]
 GrOffScreen8BPPRectFill
-                        0x00001e63    0xaa  Code  Lc  offscr8bpp.o [5]
-GrRectFill              0x00003e41    0xb2  Code  Gb  rectangle.o [5]
-GrStringDraw            0x000042e3    0x16  Code  Gb  string.o [5]
-GrStringNextCharGet     0x000043ab    0x30  Code  Gb  string.o [5]
-GrStringWidthGet        0x00004279    0x6a  Code  Gb  string.o [5]
-I2CMCommand             0x00003747    0x7e  Code  Gb  i2cm_drv.o [8]
-I2CMInit                0x00003713    0x34  Code  Gb  i2cm_drv.o [8]
-I2CMIntHandler          0x000034e1   0x216  Code  Gb  i2cm_drv.o [8]
-I2CMRead                0x00005451    0x20  Code  Gb  mpu9150.o [8]
-I2CMReadModifyWrite8    0x00003815    0x5a  Code  Gb  i2cm_drv.o [8]
+                        0x00001def    0xaa  Code  Lc  offscr8bpp.o [5]
+GrRectFill              0x00003dc9    0xb2  Code  Gb  rectangle.o [5]
+GrStringDraw            0x000047fb    0x16  Code  Gb  string.o [5]
+GrStringNextCharGet     0x000048c3    0x30  Code  Gb  string.o [5]
+GrStringWidthGet        0x00004791    0x6a  Code  Gb  string.o [5]
+I2CMCommand             0x00003647    0x7e  Code  Gb  i2cm_drv.o [8]
+I2CMInit                0x00003613    0x34  Code  Gb  i2cm_drv.o [8]
+I2CMIntHandler          0x000033e1   0x216  Code  Gb  i2cm_drv.o [8]
+I2CMRead                0x000053b5    0x20  Code  Gb  mpu9150.o [8]
+I2CMReadModifyWrite8    0x00003715    0x5a  Code  Gb  i2cm_drv.o [8]
 I2CMReadModifyWrite8Callback
-                        0x000037c5    0x50  Code  Lc  i2cm_drv.o [8]
-I2CMStateIdle           0x00003451    0x90  Code  Lc  i2cm_drv.o [8]
-I2CMWrite               0x00005433    0x1e  Code  Gb  mpu9150.o [8]
-I2CMasterControl        0x00003429     0x4  Code  Gb  i2c.o [4]
-I2CMasterDataGet        0x00003431     0x4  Code  Gb  i2c.o [4]
-I2CMasterDataPut        0x0000342d     0x4  Code  Gb  i2c.o [4]
-I2CMasterEnable         0x00003407     0xc  Code  Gb  i2c.o [4]
-I2CMasterInitExpClk     0x000033c5    0x42  Code  Gb  i2c.o [4]
-I2CMasterIntClear       0x00003419     0x8  Code  Gb  i2c.o [4]
-I2CMasterIntEnableEx    0x00003413     0x6  Code  Gb  i2c.o [4]
-I2CMasterSlaveAddrSet   0x00003421     0x8  Code  Gb  i2c.o [4]
-IntDefaultHandler       0x00006fc5     0x2  Code  Lc  startup_ewarm.o [1]
-IntDisable              0x000017a7    0x56  Code  Gb  interrupt.o [4]
-IntEnable               0x00001751    0x56  Code  Gb  interrupt.o [4]
-IntIsEnabled            0x000017fd    0x5c  Code  Gb  interrupt.o [4]
-IntMasterDisable        0x0000171d     0x6  Code  Gb  interrupt.o [4]
-IntMasterEnable         0x00001715     0x8  Code  Gb  interrupt.o [4]
-IntRegister             0x0000172b    0x26  Code  Gb  interrupt.o [4]
-IntTrigger              0x00001859     0x8  Code  Gb  interrupt.o [4]
-InternalImageDraw       0x00002647   0x33e  Code  Lc  image.o [5]
-MPU9150Callback         0x00000c47     0xa  Code  Gb  Lab_8_Main.o [1]
-MPU9150Callback         0x0000387d   0x114  Code  Lc  mpu9150.o [8]
+                        0x000036c5    0x50  Code  Lc  i2cm_drv.o [8]
+I2CMStateIdle           0x00003351    0x90  Code  Lc  i2cm_drv.o [8]
+I2CMWrite               0x00005397    0x1e  Code  Gb  mpu9150.o [8]
+I2CMasterControl        0x00003329     0x4  Code  Gb  i2c.o [4]
+I2CMasterDataGet        0x00003331     0x4  Code  Gb  i2c.o [4]
+I2CMasterDataPut        0x0000332d     0x4  Code  Gb  i2c.o [4]
+I2CMasterEnable         0x00003307     0xc  Code  Gb  i2c.o [4]
+I2CMasterInitExpClk     0x000032c5    0x42  Code  Gb  i2c.o [4]
+I2CMasterIntClear       0x00003319     0x8  Code  Gb  i2c.o [4]
+I2CMasterIntEnableEx    0x00003313     0x6  Code  Gb  i2c.o [4]
+I2CMasterSlaveAddrSet   0x00003321     0x8  Code  Gb  i2c.o [4]
+IntDefaultHandler       0x00006f29     0x2  Code  Lc  startup_ewarm.o [1]
+IntDisable              0x000014c7    0x56  Code  Gb  interrupt.o [4]
+IntEnable               0x00001471    0x56  Code  Gb  interrupt.o [4]
+IntIsEnabled            0x0000151d    0x5c  Code  Gb  interrupt.o [4]
+IntMasterDisable        0x0000143d     0x6  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00001435     0x8  Code  Gb  interrupt.o [4]
+IntRegister             0x0000144b    0x26  Code  Gb  interrupt.o [4]
+IntTrigger              0x00001579     0x8  Code  Gb  interrupt.o [4]
+InternalImageDraw       0x0000254b   0x33e  Code  Lc  image.o [5]
+MPU9150Callback         0x00000c23     0xa  Code  Gb  Lab_8_Main.o [1]
+MPU9150Callback         0x0000377d   0x114  Code  Lc  mpu9150.o [8]
 MPU9150DataAccelGetFloat
-                        0x00003a9b    0x3e  Code  Gb  mpu9150.o [8]
-MPU9150DataRead         0x00003a55    0x46  Code  Gb  mpu9150.o [8]
-MPU9150I2CIntHandler    0x00000c51     0xa  Code  Gb  Lab_8_Main.o [1]
-MPU9150Init             0x000039cd    0x44  Code  Gb  mpu9150.o [8]
-MPU9150ReadModifyWrite  0x00003a11    0x2e  Code  Gb  mpu9150.o [8]
-MPUI2C                  0x2000313c   0x124  Data  Gb  Lab_8_Main.o [1]
-NmiSR                   0x00006fc1     0x2  Code  Lc  startup_ewarm.o [1]
-PixelTransparentDraw    0x000023ed   0x226  Code  Lc  image.o [5]
-Region$$Table$$Base     0x00006f60           --   Gb  - Linker created -
-Region$$Table$$Limit    0x00006f88           --   Gb  - Linker created -
-ResetISR                0x00006fa9    0x14  Code  Gb  startup_ewarm.o [1]
-SysCtlClockGet          0x0000154d   0x110  Code  Gb  sysctl.o [4]
-SysCtlClockSet          0x00001475    0xd8  Code  Gb  sysctl.o [4]
-SysCtlDelay             0x0000146d     0x8  Code  Gb  sysctl.o [4]
-SysCtlPeripheralEnable  0x00001451     0x8  Code  Gb  sysctl.o [4]
-SysCtlPeripheralReady   0x00001431     0x8  Code  Gb  sysctl.o [4]
-Timer0InterruptHandler  0x00000525    0x26  Code  Gb  Lab_8_Main.o [1]
-TimerConfigure          0x000022ab    0x52  Code  Gb  timer.o [4]
-TimerDisable            0x0000229f     0xc  Code  Gb  timer.o [4]
-TimerEnable             0x00002293     0xc  Code  Gb  timer.o [4]
-TimerIntClear           0x00002349     0x4  Code  Gb  timer.o [4]
-TimerIntEnable          0x00002337     0x4  Code  Gb  timer.o [4]
-TimerIntRegister        0x0000231d    0x1a  Code  Gb  timer.o [4]
-TimerLoadSet            0x0000230d    0x10  Code  Gb  timer.o [4]
-UARTCharGetNonBlocking  0x0000129b     0xe  Code  Gb  uart.o [4]
-UARTCharPut             0x000012a9     0xa  Code  Gb  uart.o [4]
-UARTCharsAvail          0x0000128b     0x6  Code  Gb  uart.o [4]
-UARTConfigSetExpClk     0x000011ef    0x4c  Code  Gb  uart.o [4]
-UARTConsolePrint        0x00001b65    0x2c  Code  Gb  cec322Peripherals.o [1]
-UARTDisable             0x00001255    0x1e  Code  Gb  uart.o [4]
-UARTEnable              0x0000123b    0x1a  Code  Gb  uart.o [4]
-UARTIntClear            0x000012dd     0x4  Code  Gb  uart.o [4]
-UARTIntEnable           0x000012cd     0x6  Code  Gb  uart.o [4]
-UARTIntHandler          0x0000026d    0x42  Code  Gb  Lab_8_Main.o [1]
-UARTIntRegister         0x000012b3    0x1a  Code  Gb  uart.o [4]
-UARTIntStatus           0x000012d3     0xa  Code  Gb  uart.o [4]
-UARTQueue               0x20003260    0x90  Data  Gb  Lab_8_Main.o [1]
+                        0x0000399b    0x3e  Code  Gb  mpu9150.o [8]
+MPU9150DataRead         0x00003955    0x46  Code  Gb  mpu9150.o [8]
+MPU9150I2CIntHandler    0x00000c2d     0xa  Code  Gb  Lab_8_Main.o [1]
+MPU9150Init             0x000038cd    0x44  Code  Gb  mpu9150.o [8]
+MPU9150ReadModifyWrite  0x00003911    0x2e  Code  Gb  mpu9150.o [8]
+MPUI2C                  0x200031bc   0x124  Data  Gb  Lab_8_Main.o [1]
+NmiSR                   0x00006f25     0x2  Code  Lc  startup_ewarm.o [1]
+PixelTransparentDraw    0x000022f1   0x226  Code  Lc  image.o [5]
+Region$$Table$$Base     0x00006ec4           --   Gb  - Linker created -
+Region$$Table$$Limit    0x00006eec           --   Gb  - Linker created -
+ResetISR                0x00006f0d    0x14  Code  Gb  startup_ewarm.o [1]
+SysCtlClockGet          0x0000126d   0x110  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x00001195    0xd8  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x0000118d     0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x00001171     0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralReady   0x00001151     0x8  Code  Gb  sysctl.o [4]
+Timer0InterruptHandler  0x000004ff    0x1c  Code  Gb  Lab_8_Main.o [1]
+TimerConfigure          0x000021af    0x52  Code  Gb  timer.o [4]
+TimerDisable            0x000021a3     0xc  Code  Gb  timer.o [4]
+TimerEnable             0x00002197     0xc  Code  Gb  timer.o [4]
+TimerIntClear           0x0000224d     0x4  Code  Gb  timer.o [4]
+TimerIntEnable          0x0000223b     0x4  Code  Gb  timer.o [4]
+TimerIntRegister        0x00002221    0x1a  Code  Gb  timer.o [4]
+TimerLoadSet            0x00002211    0x10  Code  Gb  timer.o [4]
+UARTCharGetNonBlocking  0x00002017     0xe  Code  Gb  uart.o [4]
+UARTCharPut             0x00002025     0xa  Code  Gb  uart.o [4]
+UARTCharsAvail          0x00002007     0x6  Code  Gb  uart.o [4]
+UARTConfigSetExpClk     0x00001f6b    0x4c  Code  Gb  uart.o [4]
+UARTConsolePrint        0x00001805    0x2c  Code  Gb  cec322Peripherals.o [1]
+UARTDisable             0x00001fd1    0x1e  Code  Gb  uart.o [4]
+UARTEnable              0x00001fb7    0x1a  Code  Gb  uart.o [4]
+UARTIntClear            0x00002059     0x4  Code  Gb  uart.o [4]
+UARTIntEnable           0x00002049     0x6  Code  Gb  uart.o [4]
+UARTIntHandler          0x00001061    0x38  Code  Gb  Lab_8_Main.o [1]
+UARTIntRegister         0x0000202f    0x1a  Code  Gb  uart.o [4]
+UARTIntStatus           0x0000204f     0xa  Code  Gb  uart.o [4]
+UARTQueue               0x200032e0    0x90  Data  Gb  Lab_8_Main.o [1]
 UpdateContextCharMapping
-                        0x0000471f    0x40  Code  Lc  string.o [5]
-_PrintfTiny             0x00005489   0x136  Code  Gb  xprintftiny.o [3]
+                        0x00004c37    0x40  Code  Lc  string.o [5]
+_PrintfTiny             0x000053ed   0x136  Code  Gb  xprintftiny.o [3]
 _Rand_idx               0x200002a8     0x4  Data  Lc  rand.o [3]
 _Rand_rv                0x200002ac    0x80  Data  Lc  rand.o [3]
 _Randinit               0x200002a0     0x1  Data  Gb  rand.o [3]
 _Randseed               0x200002a4     0x4  Data  Gb  rand.o [3]
-_SProut                 0x00001cd3     0xa  Code  Gb  xsprout.o [3]
-_TimerIntNumberGet      0x00002251    0x42  Code  Lc  timer.o [4]
-_UARTIntNumberGet       0x000011bd    0x32  Code  Lc  uart.o [4]
-__aeabi_cdcmpeq         0x00005cd5          Code  Gb  DblCmpEq.o [6]
-__aeabi_cdcmple         0x00005a85          Code  Gb  DblCmpLe.o [6]
-__aeabi_cdrcmple        0x00005ab5          Code  Gb  DblCmpGe.o [6]
-__aeabi_d2f             0x00003db1          Code  Gb  DblToFlt.o [6]
-__aeabi_d2iz            0x000041d1          Code  Gb  DblToI32.o [6]
-__aeabi_dadd            0x000040e9          Code  Gb  DblAdd.o [6]
-__aeabi_ddiv            0x00003b59          Code  Gb  DblDiv.o [6]
-__aeabi_dmul            0x00003f45          Code  Gb  DblMul.o [6]
-__aeabi_dsub            0x00005041          Code  Gb  DblSub.o [6]
-__aeabi_errno_addr      0x00005ae5     0x6  Code  Gb  errno.o [3]
-__aeabi_f2d             0x00003ef5          Code  Gb  FltToDbl.o [6]
-__aeabi_i2d             0x00003b29          Code  Gb  I32ToDbl.o [6]
-__aeabi_memclr4         0x00004e35          Code  Gb  ABImemclr4.o [7]
-__aeabi_ui2d            0x00003b3d          Code  Gb  I32ToDbl.o [6]
-__cmain                 0x00006fd5          Code  Gb  cmain.o [7]
-__exit                  0x00007005    0x14  Code  Gb  exit.o [9]
-__iar_Dint              0x00005c59    0x7a  Code  Gb  xdint.o [6]
+_SProut                 0x00001c07     0xa  Code  Gb  xsprout.o [3]
+_TimerIntNumberGet      0x00002155    0x42  Code  Lc  timer.o [4]
+_UARTIntNumberGet       0x00001f39    0x32  Code  Lc  uart.o [4]
+__aeabi_cdcmpeq         0x00005c39          Code  Gb  DblCmpEq.o [6]
+__aeabi_cdcmple         0x000059e9          Code  Gb  DblCmpLe.o [6]
+__aeabi_cdrcmple        0x00005a19          Code  Gb  DblCmpGe.o [6]
+__aeabi_d2f             0x00003d39          Code  Gb  DblToFlt.o [6]
+__aeabi_d2iz            0x00004159          Code  Gb  DblToI32.o [6]
+__aeabi_dadd            0x00004071          Code  Gb  DblAdd.o [6]
+__aeabi_ddiv            0x00003ae1          Code  Gb  DblDiv.o [6]
+__aeabi_dmul            0x00003ecd          Code  Gb  DblMul.o [6]
+__aeabi_dsub            0x00004fa5          Code  Gb  DblSub.o [6]
+__aeabi_errno_addr      0x00005a49     0x6  Code  Gb  errno.o [3]
+__aeabi_f2d             0x00003e7d          Code  Gb  FltToDbl.o [6]
+__aeabi_i2d             0x00003ab1          Code  Gb  I32ToDbl.o [6]
+__aeabi_memclr4         0x00004d99          Code  Gb  ABImemclr4.o [7]
+__aeabi_ui2d            0x00003ac5          Code  Gb  I32ToDbl.o [6]
+__cmain                 0x00006f39          Code  Gb  cmain.o [7]
+__exit                  0x00006f69    0x14  Code  Gb  exit.o [9]
+__iar_Dint              0x00005bbd    0x7a  Code  Gb  xdint.o [6]
 __iar_Errno             0x2000032c     0x4  Data  Gb  errno.o [3]
-__iar_Memset4_word      0x000055c1          Code  Gb  ABImemset48.o [7]
-__iar_Memset8_word      0x000055c1          Code  Gb  ABImemset48.o [7]
-__iar_Quad              0x00005af1   0x12c  Code  Gb  xquad.o [6]
-__iar_Sin               0x000055f5   0x3ac  Code  Gb  xsin.o [6]
-__iar_d2uiz             0x000041fd          Code  Gb  DblToI32.o [6]
-__iar_dadd              0x000040fd          Code  Gb  DblAdd.o [6]
-__iar_data_init3        0x00006f15    0x28  Code  Gb  data_init.o [7]
+__iar_Memset4_word      0x00005525          Code  Gb  ABImemset48.o [7]
+__iar_Memset8_word      0x00005525          Code  Gb  ABImemset48.o [7]
+__iar_Quad              0x00005a55   0x12c  Code  Gb  xquad.o [6]
+__iar_Sin               0x00005559   0x3ac  Code  Gb  xsin.o [6]
+__iar_d2uiz             0x00004185          Code  Gb  DblToI32.o [6]
+__iar_dadd              0x00004085          Code  Gb  DblAdd.o [6]
+__iar_data_init3        0x00006e79    0x28  Code  Gb  data_init.o [7]
 __iar_dlib_perthread_access
-                        0x00005a49     0x2  Code  Gb  xtls.o [3]
-__iar_dsub              0x00005055          Code  Gb  DblSub.o [6]
-__iar_dsubStart         0x00005067          Code  Gb  DblSub.o [6]
-__iar_edom              0x00005a3d          Code  Gb  iarEdom.o [7]
-__iar_fmod              0x00005cf5          Code  Gb  fmod.o [6]
-__iar_fmodl             0x00005cf5          Code  Gb  fmod.o [6]
-__iar_init_vfp          0x00006f3d          Code  Gb  fpinit_M.o [6]
+                        0x000059ad     0x2  Code  Gb  xtls.o [3]
+__iar_dsub              0x00004fb9          Code  Gb  DblSub.o [6]
+__iar_dsubStart         0x00004fcb          Code  Gb  DblSub.o [6]
+__iar_edom              0x000059a1          Code  Gb  iarEdom.o [7]
+__iar_fmod              0x00005c59          Code  Gb  fmod.o [6]
+__iar_fmodl             0x00005c59          Code  Gb  fmod.o [6]
+__iar_init_vfp          0x00006ea1          Code  Gb  fpinit_M.o [6]
 __iar_packbits_init_single3
-                        0x00006e81    0x38  Code  Gb  packbits_init_single.o [7]
-__iar_program_start     0x00006fc7          Code  Gb  cstartup_M.o [7]
-__iar_sqrt              0x00004e71          Code  Gb  sqrt.o [6]
-__iar_ui2d              0x00003b41          Code  Gb  I32ToDbl.o [6]
+                        0x00006de5    0x38  Code  Gb  packbits_init_single.o [7]
+__iar_program_start     0x00006f2b          Code  Gb  cstartup_M.o [7]
+__iar_sqrt              0x00004dd5          Code  Gb  sqrt.o [6]
+__iar_ui2d              0x00003ac9          Code  Gb  I32ToDbl.o [6]
 __iar_unaligned___aeabi_memcpy4
-                        0x00001c7d          Code  Gb  ABImemcpy_unaligned.o [7]
+                        0x00001c11          Code  Gb  ABImemcpy_unaligned.o [7]
 __iar_unaligned___aeabi_memcpy8
-                        0x00001c7d          Code  Gb  ABImemcpy_unaligned.o [7]
-__iar_vfp_cos           0x00004e3b    0x12  Code  Gb  cos.o [6]
-__iar_vfp_sin           0x00004e4d    0x12  Code  Gb  sin.o [6]
-__iar_vfp_sqrt          0x00004e61          Code  Gb  sqrt.o [6]
-__iar_vfp_sqrtl         0x00004e61          Code  Gb  sqrt.o [6]
-__iar_zero_init3        0x00006e41    0x40  Code  Gb  zero_init3.o [7]
-__low_level_init        0x00006fef     0x4  Code  Gb  low_level_init.o [3]
+                        0x00001c11          Code  Gb  ABImemcpy_unaligned.o [7]
+__iar_vfp_cos           0x00004d9f    0x12  Code  Gb  cos.o [6]
+__iar_vfp_sin           0x00004db1    0x12  Code  Gb  sin.o [6]
+__iar_vfp_sqrt          0x00004dc5          Code  Gb  sqrt.o [6]
+__iar_vfp_sqrtl         0x00004dc5          Code  Gb  sqrt.o [6]
+__iar_zero_init3        0x00006da5    0x40  Code  Gb  zero_init3.o [7]
+__low_level_init        0x00006f53     0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x00000000   0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main              0x00006fe1          Code  Gb  cmain.o [7]
-_exit                   0x00006ff9          Code  Gb  cexit.o [7]
-_main                   0x00006feb          Code  Gb  cmain.o [7]
-abs                     0x00004789     0x8  Code  Gb  abs.o [3]
-accelerate              0x00002c0f    0x5c  Code  Gb  sprite.o [1]
-addValueToBuffer        0x00001029    0x34  Code  Gb  Lab_8_Main.o [1]
+_call_main              0x00006f45          Code  Gb  cmain.o [7]
+_exit                   0x00006f5d          Code  Gb  cexit.o [7]
+_main                   0x00006f4f          Code  Gb  cmain.o [7]
+abs                     0x00004201     0x8  Code  Gb  abs.o [3]
+accelerate              0x00002b15    0x54  Code  Gb  sprite.o [1]
+addValueToBuffer        0x00003a29    0x34  Code  Gb  buffer.o [1]
 asteroidFlags           0x2000029c     0x4  Data  Gb  Lab_8_Main.o [1]
-asteroidFlagsEnabled    0x2000351b     0x1  Data  Gb  Lab_8_Main.o [1]
-averageBuffer           0x0000105d    0x36  Code  Gb  Lab_8_Main.o [1]
-blinky                  0x0000189d    0x52  Code  Gb  cec322Util.o [1]
-blinky::counter         0x20003510     0x4  Data  Lc  cec322Util.o [1]
+asteroidFlagsEnabled    0x200035b6     0x1  Data  Gb  Lab_8_Main.o [1]
+averageBuffer           0x00003a5d    0x36  Code  Gb  buffer.o [1]
+blinky                  0x000015bd    0x40  Code  Gb  cec322Util.o [1]
+blinky::counter         0x200035ac     0x4  Data  Lc  cec322Util.o [1]
 blinky::enableLED       0x20000330     0x1  Data  Lc  cec322Util.o [1]
 booleanToggles          0x20000331     0x1  Data  Gb  Lab_8_Main.o [1]
-bubbleLevel             0x00000dd1   0x1a0  Code  Gb  Lab_8_Main.o [1]
-buttonsISR              0x000010af    0x6a  Code  Gb  Lab_8_Main.o [1]
+bubbleLevel             0x00000db1   0x1a0  Code  Gb  Lab_8_Main.o [1]
+buttonsISR              0x00000ff5    0x64  Code  Gb  Lab_8_Main.o [1]
 calculateBulletInitVelocity
-                        0x00002b0d    0x7e  Code  Gb  bullet.o [1]
-clearDisplay            0x00001ba3    0x52  Code  Gb  cec322Peripherals.o [1]
-clearScreen             0x0000207f    0x3c  Code  Gb  luke_graphics.o [1]
-configureButtons        0x00001c21    0x42  Code  Gb  cec322Peripherals.o [1]
-configureMPU            0x00000c5b    0x72  Code  Gb  Lab_8_Main.o [1]
-configureUART           0x00001bf5    0x2c  Code  Gb  cec322Peripherals.o [1]
-debugWriteToOLED        0x00000f8d    0x84  Code  Gb  Lab_8_Main.o [1]
-delay                   0x00004765    0x24  Code  Gb  cec322Util.o [1]
-dequeue                 0x000013f5    0x2c  Code  Gb  queue.o [1]
-detectButtonPresses     0x00004251    0x12  Code  Gb  lb_buttons.o [1]
-dispMode                0x2000351a     0x1  Data  Gb  Lab_8_Main.o [1]
-displayLives            0x00002dab    0x34  Code  Gb  asteroids_graphics.o [1]
-displayPacmanClosed     0x00002061    0x1e  Code  Gb  luke_graphics.o [1]
-displayPacmanMiddle     0x00002043    0x1e  Code  Gb  luke_graphics.o [1]
-displayPacmanOpen       0x00002025    0x1e  Code  Gb  luke_graphics.o [1]
-displaySpaceship        0x00002ddf   0x2bc  Code  Gb  asteroids_graphics.o [1]
-displaySplashAnimated   0x0000211b    0xb6  Code  Gb  luke_graphics.o [1]
-displaySprite           0x00002d6d    0x3e  Code  Gb  asteroids_graphics.o [1]
-displayTextToOLED       0x000020bb    0x60  Code  Gb  luke_graphics.o [1]
-drawCircle              0x000021d1    0x24  Code  Gb  luke_graphics.o [1]
-enableTimers            0x00000b59    0x58  Code  Gb  Lab_8_Main.o [1]
-enqueue                 0x000013bd    0x24  Code  Gb  queue.o [1]
-exit                    0x00006ff3     0x4  Code  Gb  exit.o [3]
-floatToString           0x00001aa5    0x6a  Code  Gb  cec322Util.o [1]
-floatToString::buf      0x200034a0    0x20  Data  Lc  cec322Util.o [1]
-fmod                    0x00005cf5          Code  Gb  fmod.o [6]
-fmodl                   0x00005cf5          Code  Gb  fmod.o [6]
-g_MPUDone               0x20003518     0x1  Data  Gb  Lab_8_Main.o [1]
-g_accelData             0x200034f8     0xc  Data  Gb  Lab_8_Main.o [1]
-g_fMPU9150AccelFactors  0x00003b18    0x10  Data  Lc  mpu9150.o [8]
+                        0x00002a15    0x7e  Code  Gb  bullet.o [1]
+clearDisplay            0x00001843    0x52  Code  Gb  cec322Peripherals.o [1]
+clearScreen             0x00001977    0x3c  Code  Gb  luke_graphics.o [1]
+configureButtons        0x000018c1    0x42  Code  Gb  cec322Peripherals.o [1]
+configureMPU            0x00000c37    0x72  Code  Gb  Lab_8_Main.o [1]
+configureUART           0x00001895    0x2c  Code  Gb  cec322Peripherals.o [1]
+debugWriteToOLED        0x00000f6d    0x84  Code  Gb  Lab_8_Main.o [1]
+dequeue                 0x00001bdb    0x2c  Code  Gb  queue.o [1]
+detectButtonPresses     0x000041d9    0x12  Code  Gb  lb_buttons.o [1]
+dispMode                0x200035b5     0x1  Data  Gb  Lab_8_Main.o [1]
+displayLives            0x00002cab    0x34  Code  Gb  asteroids_graphics.o [1]
+displayPacmanClosed     0x00001959    0x1e  Code  Gb  luke_graphics.o [1]
+displayPacmanMiddle     0x0000193b    0x1e  Code  Gb  luke_graphics.o [1]
+displayPacmanOpen       0x0000191d    0x1e  Code  Gb  luke_graphics.o [1]
+displaySpaceship        0x00002cdf   0x2bc  Code  Gb  asteroids_graphics.o [1]
+displaySplashAnimated   0x00001a13    0xb6  Code  Gb  luke_graphics.o [1]
+displaySprite           0x00002c6d    0x3e  Code  Gb  asteroids_graphics.o [1]
+displayTextToOLED       0x000019b3    0x60  Code  Gb  luke_graphics.o [1]
+drawCircle              0x00001ac9    0x24  Code  Gb  luke_graphics.o [1]
+enableTimers            0x00000b35    0x58  Code  Gb  Lab_8_Main.o [1]
+enqueue                 0x00001ba3    0x24  Code  Gb  queue.o [1]
+exit                    0x00006f57     0x4  Code  Gb  exit.o [3]
+floatToString           0x00001755    0x6a  Code  Gb  cec322Util.o [1]
+floatToString::buf      0x20003538    0x20  Data  Lc  cec322Util.o [1]
+fmod                    0x00005c59          Code  Gb  fmod.o [6]
+fmodl                   0x00005c59          Code  Gb  fmod.o [6]
+g_MPUDone               0x200035b4     0x1  Data  Gb  Lab_8_Main.o [1]
+g_accelData             0x20003594     0xc  Data  Gb  Lab_8_Main.o [1]
+g_fMPU9150AccelFactors  0x00003a18    0x10  Data  Lc  mpu9150.o [8]
 g_pfnRAMVectors         0x20000000   0x26c  Data  Lc  interrupt.o [4]
-g_ppui32TimerIntMap     0x0000234c    0x60  Data  Lc  timer.o [4]
+g_ppui32TimerIntMap     0x00002250    0x60  Data  Lc  timer.o [4]
 g_ppui32TimerIntMapSnowflake
-                        0x000023ac    0x40  Data  Lc  timer.o [4]
-g_ppui32UARTIntMap      0x000012e0    0x40  Data  Lc  uart.o [4]
+                        0x000022b0    0x40  Data  Lc  timer.o [4]
+g_ppui32UARTIntMap      0x0000205c    0x40  Data  Lc  uart.o [4]
 g_ppui32UARTIntMapSnowflake
-                        0x00001320    0x40  Data  Lc  uart.o [4]
+                        0x0000209c    0x40  Data  Lc  uart.o [4]
 g_psDefaultCodePointMapTable
-                        0x00002014    0x10  Data  Gb  context.o [5]
-g_psGrLibDefaults       0x20003514     0x4  Data  Lc  context.o [5]
-g_pui32Dii16Regs        0x00001888    0x14  Data  Lc  interrupt.o [4]
-g_pui32EnRegs           0x00001874    0x14  Data  Lc  interrupt.o [4]
-g_pui32GPIOBaseAddrs    0x00003334    0x90  Data  Lc  gpio.o [4]
-g_pui32Xtals            0x000016a8    0x6c  Data  Lc  sysctl.o [4]
-g_pui8Cm12Data          0x00005e9c   0x560  Data  Lc  fontcm12.o [5]
-g_pui8Dictionary        0x200034c0    0x20  Data  Lc  image.o [5]
+                        0x00002144    0x10  Data  Gb  context.o [5]
+g_psGrLibDefaults       0x200035b0     0x4  Data  Lc  context.o [5]
+g_pui32Dii16Regs        0x000015a8    0x14  Data  Lc  interrupt.o [4]
+g_pui32EnRegs           0x00001594    0x14  Data  Lc  interrupt.o [4]
+g_pui32GPIOBaseAddrs    0x00003234    0x90  Data  Lc  gpio.o [4]
+g_pui32Xtals            0x000013c8    0x6c  Data  Lc  sysctl.o [4]
+g_pui8Cm12Data          0x00005e00   0x560  Data  Lc  fontcm12.o [5]
+g_pui8Dictionary        0x20003558    0x20  Data  Lc  image.o [5]
 g_pui8Palette           0x20000280    0x1c  Data  Gb  Lab_8_Main.o [1]
-g_sCFAL96x64x16         0x00006eec    0x28  Data  Gb  cfal96x64x16.o [1]
-g_sContext              0x2000344c    0x2c  Data  Gb  Lab_8_Main.o [1]
-g_sFontCm12             0x000063fc    0xc8  Data  Gb  fontcm12.o [5]
-g_sOffScreen            0x20003478    0x28  Data  Gb  Lab_8_Main.o [1]
+g_sCFAL96x64x16         0x00006e50    0x28  Data  Gb  cfal96x64x16.o [1]
+g_sContext              0x200034e4    0x2c  Data  Gb  Lab_8_Main.o [1]
+g_sFontCm12             0x00006360    0xc8  Data  Gb  fontcm12.o [5]
+g_sOffScreen            0x20003510    0x28  Data  Gb  Lab_8_Main.o [1]
 g_ui8DisplayInitCommands
                         0x2000026c    0x14  Data  Lc  cfal96x64x16.o [1]
-getMPUDataAccel         0x00000ccd    0xf0  Code  Gb  Lab_8_Main.o [1]
+getMPUDataAccel         0x00000ca9    0xf0  Code  Gb  Lab_8_Main.o [1]
 getMPUDataAccel::dataArray
-                        0x20003504     0xc  Data  Lc  Lab_8_Main.o [1]
+                        0x200035a0     0xc  Data  Lc  Lab_8_Main.o [1]
 getMPUDataAccel::hasRun
-                        0x2000351d     0x1  Data  Lc  Lab_8_Main.o [1]
-getMPUDataAccel::xBuff  0x20003350    0x44  Data  Lc  Lab_8_Main.o [1]
-getMPUDataAccel::yBuff  0x20003394    0x44  Data  Lc  Lab_8_Main.o [1]
-getMPUDataAccel::zBuff  0x200033d8    0x44  Data  Lc  Lab_8_Main.o [1]
-imgPacmanClosed30       0x00006c48   0x1f8  Data  Gb  pm_images.o [1]
-imgPacmanMiddle30       0x00006888   0x3c0  Data  Gb  pm_images.o [1]
-imgPacmanOpen30         0x000064c4   0x3c4  Data  Gb  pm_images.o [1]
-initBlinky              0x000018ef    0x1c  Code  Gb  cec322Util.o [1]
-initDisplay             0x00001b91    0x12  Code  Gb  cec322Peripherals.o [1]
-initI2C                 0x00000bb1    0x96  Code  Gb  Lab_8_Main.o [1]
-isCollided              0x00002c6b    0x50  Code  Gb  sprite.o [1]
-killBlinky              0x0000190b     0xe  Code  Gb  cec322Util.o [1]
-main                    0x000002af   0x276  Code  Gb  Lab_8_Main.o [1]
-move                    0x00002bb9    0x56  Code  Gb  sprite.o [1]
-myMalloc                0x00001361    0x2a  Code  Gb  queue.o [1]
-newAsteroid             0x00002a1b    0x4c  Code  Gb  asteroids.o [1]
-newBuffer               0x00001093    0x1c  Code  Gb  Lab_8_Main.o [1]
-newBullet               0x00002abd    0x50  Code  Gb  bullet.o [1]
-newNode                 0x0000138b    0x14  Code  Gb  queue.o [1]
-newPoint                0x00002241     0xe  Code  Gb  luke_graphics.o [1]
-newQueue                0x0000139f    0x1e  Code  Gb  queue.o [1]
-newSMAsteroid           0x00002a67    0x56  Code  Gb  asteroids.o [1]
-newSpaceship            0x000029ad    0x6e  Code  Gb  spaceship.o [1]
-newSprite               0x00002b9d    0x1c  Code  Gb  sprite.o [1]
-out                     0x00005471    0x18  Code  Lc  xprintftiny.o [3]
-peek                    0x000013e1    0x14  Code  Gb  queue.o [1]
-prepareOLED             0x000021f5    0x32  Code  Gb  luke_graphics.o [1]
-printMenu               0x00001919    0xae  Code  Gb  cec322Util.o [1]
-printSplashText         0x00001a45    0x5e  Code  Gb  cec322Util.o [1]
-processMenuChar         0x000019c7    0x7e  Code  Gb  cec322Util.o [1]
+                        0x200035b9     0x1  Data  Lc  Lab_8_Main.o [1]
+getMPUDataAccel::xBuff  0x200033e0    0x44  Data  Lc  Lab_8_Main.o [1]
+getMPUDataAccel::yBuff  0x20003424    0x44  Data  Lc  Lab_8_Main.o [1]
+getMPUDataAccel::zBuff  0x20003468    0x44  Data  Lc  Lab_8_Main.o [1]
+imgPacmanClosed30       0x00006bac   0x1f8  Data  Gb  pm_images.o [1]
+imgPacmanMiddle30       0x000067ec   0x3c0  Data  Gb  pm_images.o [1]
+imgPacmanOpen30         0x00006428   0x3c4  Data  Gb  pm_images.o [1]
+initAsterioids          0x0000051b   0x100  Code  Gb  Lab_8_Main.o [1]
+initBlinky              0x000015fd    0x1c  Code  Gb  cec322Util.o [1]
+initDisplay             0x00001831    0x12  Code  Gb  cec322Peripherals.o [1]
+initI2C                 0x00000b8d    0x96  Code  Gb  Lab_8_Main.o [1]
+isCollided              0x00002b69    0x50  Code  Gb  sprite.o [1]
+killBlinky              0x00001619     0xe  Code  Gb  cec322Util.o [1]
+main                    0x0000026d   0x292  Code  Gb  Lab_8_Main.o [1]
+move                    0x00002abf    0x56  Code  Gb  sprite.o [1]
+myMalloc                0x00001b47    0x2a  Code  Gb  queue.o [1]
+newAsteroid             0x0000291f    0x4e  Code  Gb  asteroids.o [1]
+newBuffer               0x00003a93    0x1c  Code  Gb  buffer.o [1]
+newBullet               0x000029c5    0x50  Code  Gb  bullet.o [1]
+newNode                 0x00001b71    0x14  Code  Gb  queue.o [1]
+newPoint                0x00001b39     0xe  Code  Gb  luke_graphics.o [1]
+newQueue                0x00001b85    0x1e  Code  Gb  queue.o [1]
+newSMAsteroid           0x0000296d    0x58  Code  Gb  asteroids.o [1]
+newSpaceship            0x000028b1    0x6e  Code  Gb  spaceship.o [1]
+newSprite               0x00002aa5    0x1a  Code  Gb  sprite.o [1]
+out                     0x000053d5    0x18  Code  Lc  xprintftiny.o [3]
+peek                    0x00001bc7    0x14  Code  Gb  queue.o [1]
+prepareOLED             0x00001aed    0x32  Code  Gb  luke_graphics.o [1]
+printMenu               0x00001627    0xae  Code  Gb  cec322Util.o [1]
+processMenuChar         0x000016d5    0x7e  Code  Gb  cec322Util.o [1]
 pui32Stack              0x20000334  0x1000  Data  Lc  startup_ewarm.o [1]
 pui8_offscreenbuffer    0x20001334  0x1b08  Data  Gb  Lab_8_Main.o [1]
-rand                    0x00004f61    0xe0  Code  Gb  rand.o [3]
-randBetween             0x00002cbb    0x6a  Code  Gb  sprite.o [1]
-randomVector            0x00002d2d    0x3e  Code  Gb  sprite.o [1]
-runAsteroids            0x0000054b   0x60e  Code  Gb  Lab_8_Main.o [1]
+rand                    0x00004ec5    0xe0  Code  Gb  rand.o [3]
+randBetween             0x00002bb9    0x6a  Code  Gb  sprite.o [1]
+randomVector            0x00002c2d    0x3e  Code  Gb  sprite.o [1]
+runAsteroids            0x0000061b   0x51a  Code  Gb  Lab_8_Main.o [1]
 runAsteroids::asteroids
-                        0x2000341c    0x30  Data  Lc  Lab_8_Main.o [1]
+                        0x200034ac    0x38  Data  Lc  Lab_8_Main.o [1]
 runAsteroids::asteroidsSM
-                        0x200032f0    0x60  Data  Lc  Lab_8_Main.o [1]
+                        0x20003370    0x70  Data  Lc  Lab_8_Main.o [1]
 runAsteroids::bulletCounter
-                        0x2000351c     0x1  Data  Lc  Lab_8_Main.o [1]
-runAsteroids::bullets   0x20002e3c   0x300  Data  Lc  Lab_8_Main.o [1]
+                        0x200035b8     0x1  Data  Lc  Lab_8_Main.o [1]
+runAsteroids::bullets   0x20002e3c   0x380  Data  Lc  Lab_8_Main.o [1]
 runAsteroids::mySpaceship
-                        0x200034e0    0x18  Data  Lc  Lab_8_Main.o [1]
+                        0x20003578    0x1c  Data  Lc  Lab_8_Main.o [1]
 runAsteroids::onload    0x20000332     0x1  Data  Lc  Lab_8_Main.o [1]
-shouldClearScreen       0x20003519     0x1  Data  Gb  Lab_8_Main.o [1]
-sprintf                 0x0000421d    0x34  Code  Gb  sprintf.o [3]
-sqrt                    0x00004e71          Code  Gb  sqrt.o [6]
-sqrtl                   0x00004e71          Code  Gb  sqrt.o [6]
-strlen                  0x00005a4d          Code  Gb  strlen.o [7]
-toRad                   0x0000309b    0x24  Code  Gb  asteroids_graphics.o [1]
+shouldClearScreen       0x200035b7     0x1  Data  Gb  Lab_8_Main.o [1]
+sprintf                 0x000041a5    0x34  Code  Gb  sprintf.o [3]
+sqrt                    0x00004dd5          Code  Gb  sqrt.o [6]
+sqrtl                   0x00004dd5          Code  Gb  sqrt.o [6]
+strlen                  0x000059b1          Code  Gb  strlen.o [7]
+toRad                   0x00002f9b    0x24  Code  Gb  asteroids_graphics.o [1]
 
 
-[1] = H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj
+[1] = C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Obj
 [2] = command line
 [3] = dl7M_tln.a
 [4] = driverlib.a
@@ -710,9 +693,9 @@ toRad                   0x0000309b    0x24  Code  Gb  asteroids_graphics.o [1]
 [8] = sensorlib.a
 [9] = shb_l.a
 
-  23 914 bytes of readonly  code memory
-   5 162 bytes of readonly  data memory
-  13 597 bytes of readwrite data memory
+  23 758 bytes of readonly  code memory
+   5 138 bytes of readonly  data memory
+  13 753 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

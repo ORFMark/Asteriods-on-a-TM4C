@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-966081342
+Checksum=2082153689
 [CodeCoverage]
 Enabled=_ 0
 [Stack]
@@ -75,10 +75,12 @@ mode=0
 [Breakpoints]
 Count=0
 [Aliases]
-A0=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" ""
-A1=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" ""
-A2=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\grlib\string.c" ""
-A3=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\sensorlib\i2cm_drv.c" ""
-A4=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\sensorlib\mpu9150.c" ""
-Count=5
-SuppressDialog=0
+A0=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\cpu.c" ""
+A1=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" ""
+A2=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""
+A3=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" ""
+A4=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\grlib\string.c" ""
+A5=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\sensorlib\i2cm_drv.c" ""
+A6=_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\sensorlib\mpu9150.c" ""
+Count=7
+SuppressDialog=1

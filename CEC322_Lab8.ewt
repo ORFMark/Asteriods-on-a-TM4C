@@ -1179,6 +1179,9 @@
       <name>$PROJ_DIR$\..\lbHeaders\Graphics\asteroids_graphics.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\mrbUtil\data_structs\buffer.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\lbHeaders\Game\bullet.c</name>
     </file>
     <file>
@@ -1206,7 +1209,7 @@
       <name>$PROJ_DIR$\..\lbHeaders\Graphics\pm_images.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\mrbUtil\queue.c</name>
+      <name>$PROJ_DIR$\..\mrbUtil\data_structs\queue.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\lbHeaders\Game\spaceship.c</name>

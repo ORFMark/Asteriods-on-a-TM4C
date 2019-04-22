@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armlmiftdi.dll" 
 
-"H:\Spring 2019\CEC322\Code\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out" 
+"C:\Users\Mark\Documents\CEC322\examples\boards\dk-tm4c123g\CEC322_MRB_LB_Lab8\ewarm\Exe\uart_echo.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
 
